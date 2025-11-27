@@ -10,6 +10,11 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "cypress:install": "pnpm exec cypress install",
+    "cypress:verify": "pnpm exec cypress verify",
+    "cypress:run": "pnpm exec cypress run --browser chrome --headless",
+    "cypress:open": "cypress open",
+    "postinstall": "node ./scripts/install-cypress-if-needed.js",
     "prepare": "husky"
   },
   "dependencies": {
@@ -28,6 +33,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^15.7.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.4",
     "husky": "^9.1.7",
