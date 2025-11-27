@@ -4,7 +4,9 @@ const lintStagedConfig = {
       .map((filename) => `"${filename}"`)
       .join(' ')}`,
     'eslint . --fix --ignore-pattern "dist/*"',
-    // config testing routine...,
+    `npx jest --bail --findRelatedTests --passWithNoTests ${filenames
+      .map((filename) => `"${filename}"`)
+      .join(' ')}`,
   ],
 };
 
