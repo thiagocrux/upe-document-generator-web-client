@@ -11,6 +11,8 @@ For details about the other components of the project, check the backend reposit
 The project uses a modern toolchain focused on developer experience, performance and testability. Below are the main technologies used individually:
 
 - `next` — Framework for building the client application; provides routing, server-side rendering and other production features.
+- `next-intl` — Internationalization library designed to integrate with Next.js. It provides request-scoped message loading, formatting helpers, and React hooks to translate UI text.
+- `react` — Component-based UI library used to build the interface and manage state.
 - `react` — Component-based UI library used to build the interface and manage state.
 - `react-dom` — React DOM renderer used to render React components in the browser.
 - `typescript` — Strongly typed superset of JavaScript that improves developer tooling and code robustness.
@@ -166,6 +168,7 @@ This section documents the main scripts available in `package.json` and what the
 - Jest docs: https://jestjs.io/docs
 - Testing Library docs: https://testing-library.com/docs
 - Cypress docs: https://docs.cypress.io
+- Next-Intl docs: https://next-intl.dev/docs
 
 ## License
 
