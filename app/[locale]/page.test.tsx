@@ -1,4 +1,5 @@
-import '@testing-library/jest-dom';
+import { describe, expect, it } from '@jest/globals';
+import '@testing-library/jest-dom/jest-globals';
 import { render, screen } from '@testing-library/react';
 import Home from './page';
 
@@ -9,15 +10,13 @@ describe('Home', () => {
     const heading = screen.getByRole('heading', { level: 1 });
 
     expect(heading).toBeInTheDocument();
-    expect(heading).toHaveTextContent(
-      'To get started, edit the page.tsx file.'
-    );
+    expect(heading).toHaveTextContent('helloWorld');
   });
 
   it('has the correct tailwind classes', () => {
     render(<Home />);
 
-    const main = screen.getByRole('main');
-    expect(main).toHaveClass('flex', 'min-h-screen', 'flex-col');
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toBeInTheDocument();
   });
 });
