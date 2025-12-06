@@ -1,21 +1,18 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 import '../globals.css';
 import { Providers } from '../providers';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const poppins = Poppins({
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-poppins',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
-
+// TODO: Adjust title and description.
 export const metadata: Metadata = {
   title: 'Gerador de Documentos da UPE',
   description: 'Lorem Ipsum',
@@ -32,9 +29,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} antialiased`}>
         <Providers locale={locale}>
           <header className="flex items-center gap-x-2 justify-between">
             <div>GDOC</div>
