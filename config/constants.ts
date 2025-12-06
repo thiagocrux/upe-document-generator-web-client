@@ -5,22 +5,22 @@ export const LOCALES: Record<
   'pt-BR': {
     label: 'Português do Brasil',
     value: 'pt-BR',
-    icon: '',
+    icon: 'flag-brazil',
   },
   en: {
     label: 'English',
     value: 'en',
-    icon: '',
+    icon: 'flag-uk',
   },
   es: {
     label: 'Español',
     value: 'es',
-    icon: '',
+    icon: 'flag-spain',
   },
   fr: {
     label: 'Français',
     value: 'fr',
-    icon: '',
+    icon: 'flag-france',
   },
 };
 
