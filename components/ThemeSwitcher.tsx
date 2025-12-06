@@ -1,10 +1,11 @@
-// app/components/ThemeSwitch.tsx
 'use client';
 
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-// import { FiMoon, FiSun } from 'react-icons/fi';
+
+import { Button } from './ui/button';
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -14,6 +15,14 @@ export default function ThemeSwitcher() {
     const id = setTimeout(() => setMounted(true), 0);
     return () => clearTimeout(id);
   }, []);
+
+  function handleClick() {
+    if (resolvedTheme === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  }
 
   if (!mounted) {
     return (
@@ -29,13 +38,13 @@ export default function ThemeSwitcher() {
     );
   }
 
-  if (resolvedTheme === 'dark') {
-    // return <FiSun onClick={() => setTheme('light')} />;
-    return <button onClick={() => setTheme('light')}>light</button>;
-  }
-
-  if (resolvedTheme === 'light') {
-    // return <FiMoon onClick={() => setTheme('dark')} />;
-    return <button onClick={() => setTheme('dark')}>dark</button>;
-  }
+  return (
+    <Button
+      variant="outline"
+      className="text-[#80828b] hover:text-[#80828b]"
+      onClick={handleClick}
+    >
+      {resolvedTheme === 'dark' ? <Sun /> : <Moon />}
+    </Button>
+  );
 }

@@ -5,6 +5,17 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import { LOCALES } from '@/config/constants';
 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { DEFAULT_LOCALE } from '@/config/constants';
+import Image from 'next/image';
+
 export default function LocaleSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
@@ -37,15 +48,31 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <select
-      value={locale}
-      onChange={(event) => changeLocale(event.target.value)}
-    >
-      {Object.values(LOCALES).map((locale) => (
-        <option key={locale.label} value={locale.value}>
-          {locale.label}
-        </option>
-      ))}
-    </select>
+    <div>
+      <Select
+        value={locale}
+        defaultValue={DEFAULT_LOCALE}
+        onValueChange={(newValue) => changeLocale(newValue)}
+      >
+        <SelectTrigger>
+          <SelectValue placeholder="Selecione uma linguagem" />
+        </SelectTrigger>
+
+        <SelectContent>
+          <SelectGroup className="">
+            {Object.values(LOCALES).map((locale) => (
+              <SelectItem value={locale.value} key={locale.value}>
+                <Image
+                  src={`../flags/${locale.icon}.svg`}
+                  alt={locale.icon}
+                  width={16}
+                  height={16}
+                />
+              </SelectItem>
+            ))}
+          </SelectGroup>
+        </SelectContent>
+      </Select>
+    </div>
   );
 }

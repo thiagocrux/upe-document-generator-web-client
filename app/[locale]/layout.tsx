@@ -36,9 +36,12 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers locale={locale}>
-          <header>
-            <LocaleSwitcher />
-            <ThemeSwitcher />
+          <header className="flex items-center gap-x-2 justify-between">
+            <div>GDOC</div>
+            <div className="flex items-center gap-x-2">
+              <LocaleSwitcher />
+              <ThemeSwitcher />
+            </div>
           </header>
           <main>{children}</main>
           <footer></footer>
