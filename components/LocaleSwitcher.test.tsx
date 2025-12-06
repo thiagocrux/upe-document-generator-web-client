@@ -20,7 +20,8 @@ describe('LocaleSwitcher', () => {
     const select = screen.getByRole('combobox');
 
     // -- ACT --
-    await user.selectOptions(select, 'en');
+    await user.click(select);
+    await user.click(screen.getByAltText('flag-uk'));
 
     // -- ASSERT --
     expect(replaceMock).toHaveBeenCalledTimes(1);
