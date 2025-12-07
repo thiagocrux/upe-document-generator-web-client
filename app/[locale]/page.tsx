@@ -1,11 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  const t = useTranslations();
+export default async function RootPage() {
+  // FIXME: Implement real check to verify if there is an active session and remove the hardcoded value.
+  const hasActiveSession = true;
 
-  return (
-    <>
-      <h1>{t('helloWorld')}</h1>
-    </>
-  );
+  if (hasActiveSession) {
+    redirect('/me');
+  } else {
+    redirect('/pt-BR/auth/sign-in');
+  }
 }

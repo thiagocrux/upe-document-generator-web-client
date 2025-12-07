@@ -63,7 +63,7 @@ export default function LocaleSwitcher() {
             {Object.values(LOCALES).map((locale) => (
               <SelectItem value={locale.value} key={locale.value}>
                 <Image
-                  src={`../svgs/flags/${locale.icon}.svg`}
+                  src={`/svgs/flags/${locale.icon}.svg`}
                   alt={locale.icon}
                   width={16}
                   height={16}

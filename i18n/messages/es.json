@@ -1,3 +1,79 @@
 {
-  "helloWorld": "¡Hola Mundo!"
+  "applicationTitle": "Administrador de Documentos de la UPE",
+  "applicationDescription": "",
+
+  "NotFoundPage": {
+    "metadata": {
+      "title": "404 - Página no encontrada",
+      "description": "La página a la que intentaste acceder no existe."
+    }
+  },
+
+  "ForgotPasswordPage": {
+    "metadata": {
+      "title": "Página de recuperación de contraseña",
+      "description": ""
+    }
+  },
+  "SignInPage": {
+    "metadata": {
+      "title": "Página de inicio de sesión",
+      "description": ""
+    }
+  },
+  "SignUpPage": {
+    "metadata": {
+      "title": "Página de registro",
+      "description": ""
+    }
+  },
+
+  "AboutPage": {
+    "metadata": {
+      "title": "Página de información del sistema",
+      "description": ""
+    }
+  },
+  "DocumentsPage": {
+    "metadata": {
+      "title": "Página de documentos",
+      "description": ""
+    }
+  },
+  "DocumentsFormPage": {
+    "metadata": {
+      "title": "Página de formulario de documentos",
+      "description": ""
+    }
+  },
+  "InternshipsPage": {
+    "metadata": {
+      "title": "Página de pasantías",
+      "description": ""
+    }
+  },
+  "InternshipsFormPage": {
+    "metadata": {
+      "title": "Página de formulario de pasantías",
+      "description": ""
+    }
+  },
+  "MePage": {
+    "metadata": {
+      "title": "Página del estudiante",
+      "description": ""
+    }
+  },
+  "MeFormPage": {
+    "metadata": {
+      "title": "Página de formulario del estudiante",
+      "description": ""
+    }
+  },
+  "SettingsPage": {
+    "metadata": {
+      "title": "Página de configuración del sistema",
+      "description": ""
+    }
+  }
 }

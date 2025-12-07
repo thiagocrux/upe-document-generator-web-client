@@ -5,25 +5,28 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import LocaleSwitcher from './LocaleSwitcher';
 
 describe('LocaleSwitcher', () => {
-  it('changes the language when a new option is selected', async () => {
-    // -- ARRANGE --
+  it('changes the application locale when a new option is selected', async () => {
     const replaceMock = jest.fn();
-    (useRouter as jest.Mock).mockReturnValue({ replace: replaceMock });
-    (usePathname as jest.Mock).mockReturnValue('/pt-BR/dashboard');
-
-    (useSearchParams as jest.Mock).mockReturnValue(
-      new URLSearchParams('foo=bar')
-    );
-
+    jest
+      .mocked(useRouter)
+      .mockReturnValue({ replace: replaceMock } as unknown as ReturnType<
+        typeof useRouter
+      >);
+    jest.mocked(usePathname).mockReturnValue('/pt-BR/dashboard');
+    jest
+      .mocked(useSearchParams)
+      .mockReturnValue(
+        new URLSearchParams('foo=bar') as unknown as ReturnType<
+          typeof useSearchParams
+        >
+      );
     render(<LocaleSwitcher />);
     const user = userEvent.setup();
     const select = screen.getByRole('combobox');
 
-    // -- ACT --
     await user.click(select);
     await user.click(screen.getByAltText('flag-uk'));
 
-    // -- ASSERT --
     expect(replaceMock).toHaveBeenCalledTimes(1);
     expect(replaceMock).toHaveBeenCalledWith('/en/dashboard?foo=bar');
   });

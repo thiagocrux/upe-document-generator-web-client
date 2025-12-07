@@ -1,3 +1,80 @@
 {
-  "helloWorld": "Bonjour le monde!"
+  "applicationTitle": "Gestionnaire de documents de l'UPE",
+  "applicationDescription": "",
+  "helloWorld": "Bonjour le monde!",
+
+  "NotFoundPage": {
+    "metadata": {
+      "title": "404 - Page non trouvée",
+      "description": "La page que vous recherchez n'existe pas."
+    }
+  },
+
+  "ForgotPasswordPage": {
+    "metadata": {
+      "title": "Page de récupération du mot de passe",
+      "description": ""
+    }
+  },
+  "SignInPage": {
+    "metadata": {
+      "title": "Page de connexion",
+      "description": ""
+    }
+  },
+  "SignUpPage": {
+    "metadata": {
+      "title": "Page d'inscription",
+      "description": ""
+    }
+  },
+
+  "AboutPage": {
+    "metadata": {
+      "title": "Page d'informations sur le système",
+      "description": ""
+    }
+  },
+  "DocumentsPage": {
+    "metadata": {
+      "title": "Page des documents",
+      "description": ""
+    }
+  },
+  "DocumentsFormPage": {
+    "metadata": {
+      "title": "Page de formulaire de documents",
+      "description": ""
+    }
+  },
+  "InternshipsPage": {
+    "metadata": {
+      "title": "Page des stages",
+      "description": ""
+    }
+  },
+  "InternshipsFormPage": {
+    "metadata": {
+      "title": "Page de formulaire de stages",
+      "description": ""
+    }
+  },
+  "MePage": {
+    "metadata": {
+      "title": "Page de l'étudiant",
+      "description": ""
+    }
+  },
+  "MeFormPage": {
+    "metadata": {
+      "title": "Page de formulaire de l'étudiant",
+      "description": ""
+    }
+  },
+  "SettingsPage": {
+    "metadata": {
+      "title": "Page des paramètres du système",
+      "description": ""
+    }
+  }
 }

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import { Poppins } from 'next/font/google';
 
-import LocaleSwitcher from '@/components/LocaleSwitcher';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
-import '../globals.css';
 import { Providers } from '../providers';
+
+import '../globals.css';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -12,11 +12,19 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
-// TODO: Adjust title and description.
-export const metadata: Metadata = {
-  title: 'Gerador de Documentos da UPE',
-  description: 'Lorem Ipsum',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+
+  return {
+    title: t('applicationTitle'),
+    description: t('applicationDescription'),
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -29,18 +37,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${poppins.variable} antialiased`}>
-        <Providers locale={locale}>
-          <header className="flex items-center gap-x-2 justify-between">
-            <div>GDOC</div>
-            <div className="flex items-center gap-x-2">
-              <LocaleSwitcher />
-              <ThemeSwitcher />
-            </div>
-          </header>
-          <main>{children}</main>
-          <footer></footer>
-        </Providers>
+      <body
+        className={`${poppins.variable} antialiased flex flex-col min-h-dvh`}
+      >
+        <Providers locale={locale}>{children}</Providers>
       </body>
     </html>
   );
