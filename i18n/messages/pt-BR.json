@@ -60,13 +60,13 @@
   },
   "MePage": {
     "metadata": {
-      "title": "Página do estudante",
+      "title": "Página do estagiário",
       "description": ""
     }
   },
   "MeFormPage": {
     "metadata": {
-      "title": "Página de formulário do estudante",
+      "title": "Página de formulário do estagiário",
       "description": ""
     }
   },
@@ -74,6 +74,13 @@
     "metadata": {
       "title": "Página de configurações do sistema",
       "description": ""
+    }
+  },
+
+  "Components": {
+    "ThemeSwitcher": {
+      "lightTheme": "Tema claro",
+      "darkTheme": "Tema escuro"
     }
   }
 }

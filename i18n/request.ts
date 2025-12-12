@@ -64,5 +64,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale,
     messages: messagesModule.default,
+    timeZone: 'America/Recife',
   };
 });

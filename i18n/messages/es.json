@@ -75,5 +75,12 @@
       "title": "Página de configuración del sistema",
       "description": ""
     }
+  },
+
+  "Components": {
+    "ThemeSwitcher": {
+      "lightTheme": "Tema claro",
+      "darkTheme": "Tema oscuro"
+    }
   }
 }

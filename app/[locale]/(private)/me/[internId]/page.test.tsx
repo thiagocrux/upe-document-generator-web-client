@@ -20,7 +20,7 @@ describe('MeFormPage', () => {
 
     expect(paragraph).toBeInTheDocument();
     expect(t(paragraph.textContent.trim())).toBe(
-      'Página de formulário do estudante'
+      'Página de formulário do estagiário'
     );
   });
 });

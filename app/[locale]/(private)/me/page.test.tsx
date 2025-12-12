@@ -19,6 +19,6 @@ describe('MePage', () => {
     const paragraph = screen.getByRole('paragraph');
 
     expect(paragraph).toBeInTheDocument();
-    expect(t(paragraph.textContent.trim())).toBe('Página do estudante');
+    expect(t(paragraph.textContent.trim())).toBe('Página do estagiário');
   });
 });
