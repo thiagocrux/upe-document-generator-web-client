@@ -128,6 +128,8 @@
     oklch(0.704 0.04 256.788),
     oklch(0.551 0.027 264.364)
   );
+  /* Custom colors */
+  --color-custom-gray: light-dark(#80828b, #80828b);
 }
 
 @layer base {
@@ -144,6 +146,7 @@
   }
   body {
     font-family: var(--font-poppins), sans-serif;
+    min-width: 320px;
     @apply bg-background text-foreground;
   }
 }

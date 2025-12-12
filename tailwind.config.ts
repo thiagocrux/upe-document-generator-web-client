@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /* Shadcn-ui colors */
         background: 'var(--color-background)',
         foreground: 'var(--color-foreground)',
         card: 'var(--color-card)',
@@ -28,6 +29,9 @@ const config: Config = {
         border: 'var(--color-border)',
         input: 'var(--color-input)',
         ring: 'var(--color-ring)',
+
+        /* Custom colors */
+        'custom-gray': 'var(--color-custom-gray)',
         chart: {
           '1': 'var(--color-chart-1)',
           '2': 'var(--color-chart-2)',
