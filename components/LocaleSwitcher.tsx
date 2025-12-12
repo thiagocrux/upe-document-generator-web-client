@@ -16,7 +16,17 @@ import {
 import { DEFAULT_LOCALE } from '@/config/constants';
 import Image from 'next/image';
 
-export default function LocaleSwitcher() {
+interface LocaleSwitcherProps {
+  hideLabel?: boolean;
+  selectClasses?: string;
+  contentClasses?: string;
+}
+
+export default function LocaleSwitcher({
+  hideLabel = false,
+  selectClasses = '',
+  contentClasses = '',
+}: LocaleSwitcherProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -48,31 +58,32 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div>
-      <Select
-        value={locale}
-        defaultValue={DEFAULT_LOCALE}
-        onValueChange={(newValue) => changeLocale(newValue)}
-      >
-        <SelectTrigger>
-          <SelectValue placeholder="Selecione uma linguagem" />
-        </SelectTrigger>
+    <Select
+      value={locale}
+      defaultValue={DEFAULT_LOCALE}
+      onValueChange={(newValue) => changeLocale(newValue)}
+    >
+      <SelectTrigger className={selectClasses}>
+        <SelectValue placeholder="Selecione uma linguagem" />
+      </SelectTrigger>
 
-        <SelectContent>
-          <SelectGroup className="">
-            {Object.values(LOCALES).map((locale) => (
-              <SelectItem value={locale.value} key={locale.value}>
+      <SelectContent className={contentClasses}>
+        <SelectGroup>
+          {Object.values(LOCALES).map((locale) => (
+            <SelectItem value={locale.value} key={locale.value}>
+              <div className="flex items-center gap-x-2">
                 <Image
                   src={`/svgs/flags/${locale.icon}.svg`}
                   alt={locale.icon}
                   width={16}
                   height={16}
                 />
-              </SelectItem>
-            ))}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
-    </div>
+                {!hideLabel ? <p className="mr-2">{locale.label}</p> : null}
+              </div>
+            </SelectItem>
+          ))}
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 }

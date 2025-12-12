@@ -1,50 +1,41 @@
 'use client';
 
 import { Moon, Sun } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
 import { Button } from './ui/button';
 
-export default function ThemeSwitcher() {
-  const [mounted, setMounted] = useState(false);
+interface ThemeSwitcherProps {
+  showLabel?: boolean;
+  className?: string;
+}
+
+export default function ThemeSwitcher({
+  showLabel = false,
+  className = '',
+}: ThemeSwitcherProps) {
+  const t = useTranslations();
   const { setTheme, resolvedTheme } = useTheme();
 
-  useEffect(() => {
-    const id = setTimeout(() => setMounted(true), 0);
-    return () => clearTimeout(id);
-  }, []);
-
   function handleClick() {
-    if (resolvedTheme === 'dark') {
-      setTheme('light');
-    } else {
-      setTheme('dark');
-    }
-  }
-
-  if (!mounted) {
-    return (
-      <Image
-        src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-        width={36}
-        height={36}
-        sizes="36x36"
-        alt="Loading Light/Dark Toggle"
-        priority={false}
-        title="Loading Light/Dark Toggle"
-      />
-    );
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   }
 
   return (
     <Button
       variant="outline"
-      className="text-[#80828b] hover:text-[#80828b]"
+      className={`text-custom-gray hover:text-custom-gray bg-transparent transition-none ${className}`}
       onClick={handleClick}
     >
-      {resolvedTheme === 'dark' ? <Sun /> : <Moon />}
+      <Sun className="hidden dark:block" />
+      <Moon className="block dark:hidden" />
+      {resolvedTheme === 'dark' && showLabel && (
+        <span>{t('Components.ThemeSwitcher.lightTheme')}</span>
+      )}
+      {resolvedTheme === 'light' && showLabel && (
+        <span>{t('Components.ThemeSwitcher.darkTheme')}</span>
+      )}
     </Button>
   );
 }
