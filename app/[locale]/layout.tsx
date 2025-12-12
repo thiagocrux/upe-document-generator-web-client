@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { Poppins } from 'next/font/google';
 
 import { Providers } from '../providers';
@@ -34,13 +34,16 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${poppins.variable} antialiased flex flex-col min-h-dvh`}
+        className={`${poppins.variable} antialiased flex flex-col min-h-dvh min-w-full`}
       >
-        <Providers locale={locale}>{children}</Providers>
+        <Providers locale={locale} messages={messages}>
+          {children}
+        </Providers>
       </body>
     </html>
   );
