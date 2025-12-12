@@ -11,10 +11,10 @@ interface ProvidersProps {
 
 export function Providers({ children, locale }: ProvidersProps) {
   return (
-    <NextIntlClientProvider locale={locale}>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <NextIntlClientProvider locale={locale}>
         {children}
-      </ThemeProvider>
-    </NextIntlClientProvider>
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }
