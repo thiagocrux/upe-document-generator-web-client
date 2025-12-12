@@ -1,5 +1,5 @@
 {
-  "applicationTitle": "Administrador de Documentos de la UPE",
+  "applicationTitle": "Administrador de documentos",
   "applicationDescription": "",
 
   "NotFoundPage": {
@@ -81,6 +81,14 @@
     "ThemeSwitcher": {
       "lightTheme": "Tema claro",
       "darkTheme": "Tema oscuro"
+    },
+    "Sidebar": {
+      "Links": {
+        "Home": "Inicio",
+        "NewInternship": "Nueva pasantía",
+        "MyDocuments": "Mis documentos",
+        "Settings": "Configuración"
+      }
     }
   }
 }

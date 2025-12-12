@@ -1,5 +1,5 @@
 {
-  "applicationTitle": "UPE Document Manager",
+  "applicationTitle": "Document generator",
   "applicationDescription": "",
 
   "NotFoundPage": {
@@ -81,6 +81,14 @@
     "ThemeSwitcher": {
       "lightTheme": "Light theme",
       "darkTheme": "Dark theme"
+    },
+    "Sidebar": {
+      "Links": {
+        "Home": "Home",
+        "NewInternship": "New internship",
+        "MyDocuments": "My documents",
+        "Settings": "Settings"
+      }
     }
   }
 }

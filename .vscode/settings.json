@@ -6,5 +6,6 @@
     "source.sortImports": "always"
   },
   "i18n-ally.localesPaths": ["i18n", "i18n/messages"],
-  "i18n-ally.sourceLanguage": "pt-BR"
+  "i18n-ally.sourceLanguage": "pt-BR",
+  "i18n-ally.keystyle": "nested"
 }

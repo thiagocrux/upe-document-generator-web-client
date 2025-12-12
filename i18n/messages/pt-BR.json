@@ -1,5 +1,5 @@
 {
-  "applicationTitle": "Gerenciador de Documentos da UPE",
+  "applicationTitle": "Gerador de documentos",
   "applicationDescription": "",
 
   "NotFoundPage": {
@@ -81,6 +81,14 @@
     "ThemeSwitcher": {
       "lightTheme": "Tema claro",
       "darkTheme": "Tema escuro"
+    },
+    "Sidebar": {
+      "Links": {
+        "Home": "Início",
+        "NewInternship": "Novo estágio",
+        "MyDocuments": "Meus documentos",
+        "Settings": "Configurações"
+      }
     }
   }
 }

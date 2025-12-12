@@ -1,5 +1,5 @@
 {
-  "applicationTitle": "Gestionnaire de documents de l'UPE",
+  "applicationTitle": "Gestionnaire de documents",
   "applicationDescription": "",
   "helloWorld": "Bonjour le monde!",
 
@@ -82,6 +82,14 @@
     "ThemeSwitcher": {
       "lightTheme": "Thème clair",
       "darkTheme": "Thème sombre"
+    },
+    "Sidebar": {
+      "Links": {
+        "Home": "Accueil",
+        "NewInternship": "Nouveau stage",
+        "MyDocuments": "Mes documents",
+        "Settings": "Paramètres"
+      }
     }
   }
 }
