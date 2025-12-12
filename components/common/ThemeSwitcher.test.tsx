@@ -2,7 +2,7 @@ import { describe, expect, it } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { setTheme } from 'next-themes';
-import ThemeSwitcher from './ThemeSwitcher';
+import ThemeSwitcher from '../ThemeSwitcher';
 
 describe('ThemeSwitcher', () => {
   it('changes the theme when the button is clicked', async () => {

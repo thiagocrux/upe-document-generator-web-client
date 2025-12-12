@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import { useTranslations } from 'next-intl';
-import Logo from './Logo';
-import { Button } from './ui/button';
+import Logo from '../common/Logo';
+import { Button } from '../ui/button';
 
 interface SidebarProps {
   className?: string;
@@ -27,7 +27,7 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
         <Link href="/me" className="flex items-center gap-x-1">
           <Button
             variant="ghost"
-            className="w-full justify-start transition-none text-custom-gray hover:text-custom-gray"
+            className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
             <House /> <span>{t('Components.Sidebar.Links.Home')}</span>
           </Button>
@@ -35,7 +35,7 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
         <Link href="/internships" className="flex items-center gap-x-1">
           <Button
             variant="ghost"
-            className="w-full justify-start transition-none text-custom-gray hover:text-custom-gray"
+            className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
             <BriefcaseBusiness />{' '}
             <span>{t('Components.Sidebar.Links.NewInternship')}</span>
@@ -44,7 +44,7 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
         <Link href="/documents" className="flex items-center gap-x-1">
           <Button
             variant="ghost"
-            className="w-full justify-start transition-none text-custom-gray hover:text-custom-gray"
+            className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
             <FilePlus />{' '}
             <span>{t('Components.Sidebar.Links.MyDocuments')}</span>
@@ -53,12 +53,12 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
         <Link href="/settings" className="flex items-center gap-x-1">
           <Button
             variant="ghost"
-            className="w-full justify-start transition-none text-custom-gray hover:text-custom-gray"
+            className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
             <Cog /> <span>{t('Components.Sidebar.Links.Settings')}</span>
           </Button>
         </Link>
-        <div className="flex flex-col gap-y-2 w-full mt-auto">{children}</div>
+        <div className="flex flex-col gap-y-2 mt-auto w-full">{children}</div>
       </div>
     </aside>
   );

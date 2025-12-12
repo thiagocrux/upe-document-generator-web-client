@@ -4,7 +4,7 @@ import { Moon, Sun } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 interface ThemeSwitcherProps {
   showLabel?: boolean;
@@ -29,7 +29,7 @@ export default function ThemeSwitcher({
       onClick={handleClick}
     >
       <Sun className="hidden dark:block" />
-      <Moon className="block dark:hidden" />
+      <Moon className="dark:hidden block" />
       {resolvedTheme === 'dark' && showLabel && (
         <span>{t('Components.ThemeSwitcher.lightTheme')}</span>
       )}
