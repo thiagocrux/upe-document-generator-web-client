@@ -15,8 +15,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
-    title: t('pages.auth.PassowordRecoveryPage.metadata.title'),
-    description: t('pages.auth.PassowordRecoveryPage.metadata.description'),
+    title: t('pages.auth.PasswordRecoveryPage.metadata.title'),
+    description: t('pages.auth.PasswordRecoveryPage.metadata.description'),
   };
 }
 

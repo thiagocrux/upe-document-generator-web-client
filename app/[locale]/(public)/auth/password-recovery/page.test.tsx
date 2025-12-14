@@ -5,14 +5,14 @@ import { NextIntlClientProvider } from 'next-intl';
 // import { getTranslations } from 'next-intl/server';
 
 import ptBRMessages from '@/i18n/messages/pt-BR.json';
-import PassowordRecoveryPage from './page';
+import PasswordRecoveryPage from './page';
 
 // TODO: Increment tests.
-describe('PassowordRecoveryPage', () => {
+describe('PasswordRecoveryPage', () => {
   it('renders a paragraph with the title of the page', async () => {
     render(
       <NextIntlClientProvider locale="pt-BR" messages={ptBRMessages}>
-        <PassowordRecoveryPage />
+        <PasswordRecoveryPage />
       </NextIntlClientProvider>
     );
 
