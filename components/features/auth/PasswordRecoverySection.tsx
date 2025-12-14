@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowLeft, CircleAlert, CircleCheckBig } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,6 +14,8 @@ interface PasswordRecoverySectionProps {
 export default function PasswordRecoverySection({
   variant = 'solicitation',
 }: PasswordRecoverySectionProps) {
+  const router = useRouter();
+
   return (
     <>
       <div className="flex flex-col gap-y-8 p-6 sm:p-12 w-full">
@@ -34,9 +37,13 @@ export default function PasswordRecoverySection({
                 />
               </div>
               <Button size="lg" className="w-full">
-                Entrar
+                Enviar instruções
               </Button>
-              <Button variant="link" className="p-0 w-min cursor-pointer">
+              <Button
+                variant="link"
+                className="p-0 w-min cursor-pointer"
+                onClick={() => router.push('/auth/sign-in')}
+              >
                 <ArrowLeft />
                 <span>Voltar para o login</span>
               </Button>
@@ -59,7 +66,11 @@ export default function PasswordRecoverySection({
             <p className="text-sm">
               Não recebeu? Verifique sua caixa de spam ou tente novamente.
             </p>
-            <Button size="lg" className="w-full">
+            <Button
+              size="lg"
+              className="w-full"
+              onClick={() => router.push('/auth/sign-in')}
+            >
               Voltar ao login
             </Button>
           </>
@@ -81,11 +92,7 @@ export default function PasswordRecoverySection({
               <Button size="lg" className="w-full">
                 Solicitar novamente
               </Button>
-              <Button
-                size="lg"
-                variant="link"
-                className="flex justify-start p-0 cursor-pointer"
-              >
+              <Button variant="link" className="p-0 w-min cursor-pointer">
                 <ArrowLeft />
                 <span>Voltar para o login</span>
               </Button>

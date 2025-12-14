@@ -51,8 +51,11 @@ export default function SignInPage() {
               className="mt-1 placeholder:text-sm"
             />
           </div>
-          <p className="text-sm text-right">Esqueceu a senha?</p>
+          <Button variant="link" className="self-end p-0 font-normal">
+            <Link href="/auth/password-recovery">Esqueceu a senha?</Link>
+          </Button>
         </div>
+        {/* TODO: Implement form and submit functionalities. */}
         <Button size="lg" className="w-full">
           Entrar
         </Button>

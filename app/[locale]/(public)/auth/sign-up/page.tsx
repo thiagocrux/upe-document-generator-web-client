@@ -1,11 +1,12 @@
+import type { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
 import InteractiveMapSection from '@/components/features/auth/InteractiveMapSection';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
-import type { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
 export async function generateMetadata({
@@ -81,13 +82,14 @@ export default function SignUpPage() {
             />
           </div>
         </div>
+        {/* TODO: Implement form and submit functionalities. */}
         <Button size="lg" className="w-full">
-          Entrar
+          Cadastrar
         </Button>
         <p className="text-gray-500 text-sm text-center">
-          Não tem uma conta?{' '}
+          Já tem uma conta?{' '}
           <Button variant="link" className="p-0 font-bold">
-            <Link href="/auth/sign-up">Cadastre-se</Link>
+            <Link href="/auth/sign-in">Faça login</Link>
           </Button>
           .
         </p>
