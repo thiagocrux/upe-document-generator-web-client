@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
-import LocaleSwitcher from '@/components/LocaleSwitcher';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
+import LocaleSwitcher from '@/components/common/LocaleSwitcher';
+import Logo from '@/components/common/Logo';
+import ThemeSwitcher from '@/components/common/ThemeSwitcher';
+import Sidebar from '@/components/layout/Sidebar';
 
 export async function generateMetadata({
   params,
@@ -24,18 +26,29 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <header className="flex items-center gap-x-2 justify-between min-h-20 px-6 border-b border-border">
-        <div>GDOC</div>
-        <div className="flex items-center gap-x-2">
-          <LocaleSwitcher />
-          <ThemeSwitcher />
-        </div>
-      </header>
-      <main className="flex flex-col flex-1 px-6 py-10">{children}</main>
-      <footer className="border-t border-border flex py-10 min-h-20 px-6">
-        Footer
-      </footer>
-    </>
+    <div className="flex flex-1 border">
+      <Sidebar className="hidden md:top-0 md:left-0 md:fixed md:flex md:h-dvh">
+        <LocaleSwitcher />
+        <ThemeSwitcher showLabel />
+      </Sidebar>
+
+      <div className="flex flex-col w-full">
+        <nav className="md:hidden xl:top-4 xl:right-4 xl:absolute flex xl:flex justify-between items-center gap-x-4 xl:p-0 px-6 py-4 w-full xl:w-auto">
+          <Logo className="md:hidden flex" />
+          <div className="flex items-center gap-x-2">
+            <LocaleSwitcher hideLabel selectClasses="min-w-15.5" />
+            <ThemeSwitcher />
+          </div>
+        </nav>
+
+        <main className="flex flex-col flex-1 items-center px-6 py-6 w-full">
+          <div className="md:ml-80 max-w-2xl">{children}</div>
+        </main>
+
+        <footer className="flex md:ml-80 px-6 py-10 border-border border-t min-h-20">
+          Footer
+        </footer>
+      </div>
+    </div>
   );
 }

@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
+import LockSection from '@/components/features/auth/LockSection';
+import PasswordRecoverySection from '@/components/features/auth/PasswordRecoverySection';
+import { Separator } from '@/components/ui/separator';
+
 export async function generateMetadata({
   params,
 }: {
@@ -11,13 +15,19 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
-    title: t('ForgotPasswordPage.metadata.title'),
-    description: t('ForgotPasswordPage.metadata.description'),
+    title: t('PassowordRecoveryPage.metadata.title'),
+    description: t('PassowordRecoveryPage.metadata.description'),
   };
 }
 
-export default function ForgotPasswordPage() {
+export default function PasswordRecoveryPage() {
   const t = useTranslations();
 
-  return <p>{t('ForgotPasswordPage.metadata.title')}</p>;
+  return (
+    <>
+      <PasswordRecoverySection />
+      <Separator orientation="vertical" className="hidden md:flex h-auto" />
+      <LockSection />
+    </>
+  );
 }

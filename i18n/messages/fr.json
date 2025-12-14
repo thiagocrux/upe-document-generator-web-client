@@ -10,7 +10,7 @@
     }
   },
 
-  "ForgotPasswordPage": {
+  "PassowordRecoveryPage": {
     "metadata": {
       "title": "Page de récupération du mot de passe",
       "description": ""
