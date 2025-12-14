@@ -17,8 +17,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
-    title: t('SignUpPage.metadata.title'),
-    description: t('SignUpPage.metadata.description'),
+    title: t('pages.auth.SignUpPage.metadata.title'),
+    description: t('pages.auth.SignUpPage.metadata.description'),
   };
 }
 

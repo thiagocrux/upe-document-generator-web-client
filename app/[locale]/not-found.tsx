@@ -11,13 +11,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
-    title: t('NotFoundPage.metadata.title'),
-    description: t('NotFoundPage.metadata.description'),
+    title: t('pages.NotFoundPage.metadata.title'),
+    description: t('pages.NotFoundPage.metadata.description'),
   };
 }
 
 export default function NotFound() {
   const t = useTranslations();
 
-  return <p>{t('NotFoundPage.metadata.title')}</p>;
+  return <p>{t('pages.NotFoundPage.metadata.title')}</p>;
 }

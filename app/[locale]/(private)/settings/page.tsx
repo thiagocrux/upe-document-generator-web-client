@@ -11,13 +11,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
-    title: t('SettingsPage.metadata.title'),
-    description: t('SettingsPage.metadata.description'),
+    title: t('pages.internal.SettingsPage.metadata.title'),
+    description: t('pages.internal.SettingsPage.metadata.description'),
   };
 }
 
 export default function SettingsPage() {
   const t = useTranslations();
 
-  return <p>{t('SettingsPage.metadata.title')}</p>;
+  return <p>{t('pages.internal.SettingsPage.metadata.title')}</p>;
 }

@@ -31,10 +31,10 @@ export default function ThemeSwitcher({
       <Sun className="hidden dark:block" />
       <Moon className="dark:hidden block" />
       {resolvedTheme === 'dark' && showLabel && (
-        <span>{t('Components.ThemeSwitcher.lightTheme')}</span>
+        <span>{t('components.common.ThemeSwitcher.lightTheme')}</span>
       )}
       {resolvedTheme === 'light' && showLabel && (
-        <span>{t('Components.ThemeSwitcher.darkTheme')}</span>
+        <span>{t('components.common.ThemeSwitcher.darkTheme')}</span>
       )}
     </Button>
   );

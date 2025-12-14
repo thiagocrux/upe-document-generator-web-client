@@ -2,93 +2,108 @@
   "applicationTitle": "Administrador de documentos",
   "applicationDescription": "",
 
-  "NotFoundPage": {
-    "metadata": {
-      "title": "404 - Página no encontrada",
-      "description": "La página a la que intentaste acceder no existe."
-    }
-  },
-
-  "PassowordRecoveryPage": {
-    "metadata": {
-      "title": "Página de recuperación de contraseña",
-      "description": ""
-    }
-  },
-  "SignInPage": {
-    "metadata": {
-      "title": "Página de inicio de sesión",
-      "description": ""
-    }
-  },
-  "SignUpPage": {
-    "metadata": {
-      "title": "Página de registro",
-      "description": ""
-    }
-  },
-
-  "AboutPage": {
-    "metadata": {
-      "title": "Página de información del sistema",
-      "description": ""
-    }
-  },
-  "DocumentsPage": {
-    "metadata": {
-      "title": "Página de documentos",
-      "description": ""
-    }
-  },
-  "DocumentsFormPage": {
-    "metadata": {
-      "title": "Página de formulario de documentos",
-      "description": ""
-    }
-  },
-  "InternshipsPage": {
-    "metadata": {
-      "title": "Página de pasantías",
-      "description": ""
-    }
-  },
-  "InternshipsFormPage": {
-    "metadata": {
-      "title": "Página de formulario de pasantías",
-      "description": ""
-    }
-  },
-  "MePage": {
-    "metadata": {
-      "title": "Página del estudiante",
-      "description": ""
-    }
-  },
-  "MeFormPage": {
-    "metadata": {
-      "title": "Página de formulario del estudiante",
-      "description": ""
-    }
-  },
-  "SettingsPage": {
-    "metadata": {
-      "title": "Página de configuración del sistema",
-      "description": ""
-    }
-  },
-
-  "Components": {
-    "ThemeSwitcher": {
-      "lightTheme": "Tema claro",
-      "darkTheme": "Tema oscuro"
+  "pages": {
+    "NotFoundPage": {
+      "metadata": {
+        "title": "404 - Página no encontrada",
+        "description": "La página a la que intentaste acceder no existe."
+      }
     },
-    "Sidebar": {
-      "Links": {
-        "Home": "Inicio",
-        "NewInternship": "Nueva pasantía",
-        "MyDocuments": "Mis documentos",
-        "Settings": "Configuración"
+
+    "auth": {
+      "PassowordRecoveryPage": {
+        "metadata": {
+          "title": "Página de recuperación de contraseña",
+          "description": ""
+        }
+      },
+      "SignInPage": {
+        "metadata": {
+          "title": "Página de inicio de sesión",
+          "description": ""
+        }
+      },
+      "SignUpPage": {
+        "metadata": {
+          "title": "Página de registro",
+          "description": ""
+        }
+      }
+    },
+
+    "internal": {
+      "DocumentsPage": {
+        "metadata": {
+          "title": "Página de documentos",
+          "description": ""
+        }
+      },
+      "DocumentsFormPage": {
+        "metadata": {
+          "title": "Página de formulario de documentos",
+          "description": ""
+        }
+      },
+      "InternshipsPage": {
+        "metadata": {
+          "title": "Página de pasantías",
+          "description": ""
+        }
+      },
+      "InternshipsFormPage": {
+        "metadata": {
+          "title": "Página de formulario de pasantías",
+          "description": ""
+        }
+      },
+      "MePage": {
+        "metadata": {
+          "title": "Página del estudiante",
+          "description": ""
+        }
+      },
+      "MeFormPage": {
+        "metadata": {
+          "title": "Página de formulario del estudiante",
+          "description": ""
+        }
+      },
+      "SettingsPage": {
+        "metadata": {
+          "title": "Página de configuración del sistema",
+          "description": ""
+        }
+      },
+      "AboutPage": {
+        "metadata": {
+          "title": "Página de información del sistema",
+          "description": ""
+        }
       }
     }
+  },
+
+  "components": {
+    "common": {
+      "ThemeSwitcher": {
+        "lightTheme": "Tema claro",
+        "darkTheme": "Tema oscuro"
+      }
+    },
+
+    "features": {},
+
+    "layout": {
+      "Sidebar": {
+        "links": {
+          "home": "Inicio",
+          "newInternship": "Nueva pasantía",
+          "myDocuments": "Mis documentos",
+          "settings": "Configuración"
+        }
+      }
+    },
+
+    "ui": {}
   }
 }

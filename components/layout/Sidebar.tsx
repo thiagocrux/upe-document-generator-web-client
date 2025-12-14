@@ -29,7 +29,7 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
             variant="ghost"
             className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
-            <House /> <span>{t('Components.Sidebar.Links.Home')}</span>
+            <House /> <span>{t('components.layout.Sidebar.links.home')}</span>
           </Button>
         </Link>
         <Link href="/internships" className="flex items-center gap-x-1">
@@ -38,7 +38,7 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
             className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
             <BriefcaseBusiness />{' '}
-            <span>{t('Components.Sidebar.Links.NewInternship')}</span>
+            <span>{t('components.layout.Sidebar.links.newInternship')}</span>
           </Button>
         </Link>
         <Link href="/documents" className="flex items-center gap-x-1">
@@ -47,7 +47,7 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
             className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
             <FilePlus />{' '}
-            <span>{t('Components.Sidebar.Links.MyDocuments')}</span>
+            <span>{t('components.layout.Sidebar.links.myDocuments')}</span>
           </Button>
         </Link>
         <Link href="/settings" className="flex items-center gap-x-1">
@@ -55,7 +55,7 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
             variant="ghost"
             className="justify-start w-full text-custom-gray hover:text-custom-gray transition-none"
           >
-            <Cog /> <span>{t('Components.Sidebar.Links.Settings')}</span>
+            <Cog /> <span>{t('components.layout.Sidebar.links.settings')}</span>
           </Button>
         </Link>
         <div className="flex flex-col gap-y-2 mt-auto w-full">{children}</div>

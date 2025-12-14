@@ -2,93 +2,108 @@
   "applicationTitle": "Document generator",
   "applicationDescription": "",
 
-  "NotFoundPage": {
-    "metadata": {
-      "title": "404 - Page Not Found",
-      "description": "The page you tried to access does not exist."
-    }
-  },
-
-  "PassowordRecoveryPage": {
-    "metadata": {
-      "title": "Forgot Password Page",
-      "description": ""
-    }
-  },
-  "SignInPage": {
-    "metadata": {
-      "title": "Sign In Page",
-      "description": ""
-    }
-  },
-  "SignUpPage": {
-    "metadata": {
-      "title": "Sign Up Page",
-      "description": ""
-    }
-  },
-
-  "AboutPage": {
-    "metadata": {
-      "title": "System Information Page",
-      "description": ""
-    }
-  },
-  "DocumentsPage": {
-    "metadata": {
-      "title": "Documents Page",
-      "description": ""
-    }
-  },
-  "DocumentsFormPage": {
-    "metadata": {
-      "title": "Documents Form Page",
-      "description": ""
-    }
-  },
-  "InternshipsPage": {
-    "metadata": {
-      "title": "Internships Page",
-      "description": ""
-    }
-  },
-  "InternshipsFormPage": {
-    "metadata": {
-      "title": "Internships Form Page",
-      "description": ""
-    }
-  },
-  "MePage": {
-    "metadata": {
-      "title": "Intern Page",
-      "description": ""
-    }
-  },
-  "MeFormPage": {
-    "metadata": {
-      "title": "Intern Form Page",
-      "description": ""
-    }
-  },
-  "SettingsPage": {
-    "metadata": {
-      "title": "System Settings Page",
-      "description": ""
-    }
-  },
-
-  "Components": {
-    "ThemeSwitcher": {
-      "lightTheme": "Light theme",
-      "darkTheme": "Dark theme"
+  "pages": {
+    "NotFoundPage": {
+      "metadata": {
+        "title": "404 - Page Not Found",
+        "description": "The page you tried to access does not exist."
+      }
     },
-    "Sidebar": {
-      "Links": {
-        "Home": "Home",
-        "NewInternship": "New internship",
-        "MyDocuments": "My documents",
-        "Settings": "Settings"
+
+    "auth": {
+      "PassowordRecoveryPage": {
+        "metadata": {
+          "title": "Forgot Password Page",
+          "description": ""
+        }
+      },
+      "SignInPage": {
+        "metadata": {
+          "title": "Sign In Page",
+          "description": ""
+        }
+      },
+      "SignUpPage": {
+        "metadata": {
+          "title": "Sign Up Page",
+          "description": ""
+        }
+      }
+    },
+
+    "internal": {
+      "DocumentsPage": {
+        "metadata": {
+          "title": "Documents Page",
+          "description": ""
+        }
+      },
+      "DocumentsFormPage": {
+        "metadata": {
+          "title": "Documents Form Page",
+          "description": ""
+        }
+      },
+      "InternshipsPage": {
+        "metadata": {
+          "title": "Internships Page",
+          "description": ""
+        }
+      },
+      "InternshipsFormPage": {
+        "metadata": {
+          "title": "Internships Form Page",
+          "description": ""
+        }
+      },
+      "MePage": {
+        "metadata": {
+          "title": "Intern Page",
+          "description": ""
+        }
+      },
+      "MeFormPage": {
+        "metadata": {
+          "title": "Intern Form Page",
+          "description": ""
+        }
+      },
+      "SettingsPage": {
+        "metadata": {
+          "title": "System Settings Page",
+          "description": ""
+        }
+      },
+      "AboutPage": {
+        "metadata": {
+          "title": "System Information Page",
+          "description": ""
+        }
       }
     }
+  },
+
+  "components": {
+    "common": {
+      "ThemeSwitcher": {
+        "lightTheme": "Light theme",
+        "darkTheme": "Dark theme"
+      }
+    },
+
+    "features": {},
+
+    "layout": {
+      "Sidebar": {
+        "links": {
+          "home": "Home",
+          "newInternship": "New internship",
+          "myDocuments": "My documents",
+          "settings": "Settings"
+        }
+      }
+    },
+
+    "ui": {}
   }
 }

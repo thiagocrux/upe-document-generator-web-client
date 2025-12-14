@@ -2,93 +2,108 @@
   "applicationTitle": "Gerador de documentos",
   "applicationDescription": "",
 
-  "NotFoundPage": {
-    "metadata": {
-      "title": "404 - Página não encontrada",
-      "description": "A página que você tentou acessar não existe."
-    }
-  },
-
-  "PassowordRecoveryPage": {
-    "metadata": {
-      "title": "Página de recuperação de senha",
-      "description": ""
-    }
-  },
-  "SignInPage": {
-    "metadata": {
-      "title": "Página de acesso",
-      "description": ""
-    }
-  },
-  "SignUpPage": {
-    "metadata": {
-      "title": "Página de cadastro",
-      "description": ""
-    }
-  },
-
-  "AboutPage": {
-    "metadata": {
-      "title": "Página de informações do sistema",
-      "description": ""
-    }
-  },
-  "DocumentsPage": {
-    "metadata": {
-      "title": "Página de documentos",
-      "description": ""
-    }
-  },
-  "DocumentsFormPage": {
-    "metadata": {
-      "title": "Página de formulário de documentos",
-      "description": ""
-    }
-  },
-  "InternshipsPage": {
-    "metadata": {
-      "title": "Página de estágios",
-      "description": ""
-    }
-  },
-  "InternshipsFormPage": {
-    "metadata": {
-      "title": "Página de formulário de estágios",
-      "description": ""
-    }
-  },
-  "MePage": {
-    "metadata": {
-      "title": "Página do estagiário",
-      "description": ""
-    }
-  },
-  "MeFormPage": {
-    "metadata": {
-      "title": "Página de formulário do estagiário",
-      "description": ""
-    }
-  },
-  "SettingsPage": {
-    "metadata": {
-      "title": "Página de configurações do sistema",
-      "description": ""
-    }
-  },
-
-  "Components": {
-    "ThemeSwitcher": {
-      "lightTheme": "Tema claro",
-      "darkTheme": "Tema escuro"
+  "pages": {
+    "NotFoundPage": {
+      "metadata": {
+        "title": "404 - Página não encontrada",
+        "description": "A página que você tentou acessar não existe."
+      }
     },
-    "Sidebar": {
-      "Links": {
-        "Home": "Início",
-        "NewInternship": "Novo estágio",
-        "MyDocuments": "Meus documentos",
-        "Settings": "Configurações"
+
+    "auth": {
+      "PassowordRecoveryPage": {
+        "metadata": {
+          "title": "Página de recuperação de senha",
+          "description": ""
+        }
+      },
+      "SignInPage": {
+        "metadata": {
+          "title": "Página de acesso",
+          "description": ""
+        }
+      },
+      "SignUpPage": {
+        "metadata": {
+          "title": "Página de cadastro",
+          "description": ""
+        }
+      }
+    },
+
+    "internal": {
+      "DocumentsPage": {
+        "metadata": {
+          "title": "Página de documentos",
+          "description": ""
+        }
+      },
+      "DocumentsFormPage": {
+        "metadata": {
+          "title": "Página de formulário de documentos",
+          "description": ""
+        }
+      },
+      "InternshipsPage": {
+        "metadata": {
+          "title": "Página de estágios",
+          "description": ""
+        }
+      },
+      "InternshipsFormPage": {
+        "metadata": {
+          "title": "Página de formulário de estágios",
+          "description": ""
+        }
+      },
+      "MePage": {
+        "metadata": {
+          "title": "Página do estagiário",
+          "description": ""
+        }
+      },
+      "MeFormPage": {
+        "metadata": {
+          "title": "Página de formulário do estagiário",
+          "description": ""
+        }
+      },
+      "SettingsPage": {
+        "metadata": {
+          "title": "Página de configurações do sistema",
+          "description": ""
+        }
+      },
+      "AboutPage": {
+        "metadata": {
+          "title": "Página de informações do sistema",
+          "description": ""
+        }
       }
     }
+  },
+
+  "components": {
+    "common": {
+      "ThemeSwitcher": {
+        "lightTheme": "Tema claro",
+        "darkTheme": "Tema escuro"
+      }
+    },
+
+    "features": {},
+
+    "layout": {
+      "Sidebar": {
+        "links": {
+          "home": "Início",
+          "newInternship": "Novo estágio",
+          "myDocuments": "Meus documentos",
+          "settings": "Configurações"
+        }
+      }
+    },
+
+    "ui": {}
   }
 }
