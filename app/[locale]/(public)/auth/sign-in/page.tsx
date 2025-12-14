@@ -24,45 +24,47 @@ export async function generateMetadata({
 }
 
 export default function SignInPage() {
-  const t = useTranslations();
+  const t = useTranslations('pages.auth.SignInPage');
 
   return (
     <>
       <div className="flex flex-col gap-y-8 p-6 sm:p-12 w-full">
         <div className="flex flex-col gap-y-2">
-          <p className="font-bold text-2xl">Bem-vindo de volta</p>
-          <p className="text-gray-500 text-sm">
-            Insira suas credenciais para acessar.
-          </p>
+          <p className="font-bold text-2xl">{t('title')}</p>
+          <p className="text-gray-500 text-sm">{t('subtitle')}</p>
         </div>
         <div className="flex flex-col gap-y-4">
           <div>
-            <Label>E-mail</Label>
+            <Label>{t('form.inputs.email.label')}</Label>
             <Input
-              placeholder="Insira o seu e-mail"
+              placeholder={t('form.inputs.email.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
           <div>
-            <Label>Senha</Label>
+            <Label>{t('form.inputs.password.label')}</Label>
             <Input
               type="password"
-              placeholder="Insira a sua senha"
+              placeholder={t('form.inputs.password.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
           <Button variant="link" className="self-end p-0 font-normal">
-            <Link href="/auth/password-recovery">Esqueceu a senha?</Link>
+            <Link href="/auth/password-recovery">
+              {t('form.buttons.forgotPassword')}
+            </Link>
           </Button>
         </div>
         {/* TODO: Implement form and submit functionalities. */}
         <Button size="lg" className="w-full">
-          Entrar
+          {t('form.buttons.submit')}
         </Button>
         <p className="text-gray-500 text-sm text-center">
-          Não tem uma conta?{' '}
+          {t('buttons.notRegisteredYet.text')}{' '}
           <Button variant="link" className="p-0 font-bold">
-            <Link href="/auth/sign-up">Cadastre-se</Link>
+            <Link href="/auth/sign-up">
+              {t('buttons.notRegisteredYet.link')}
+            </Link>
           </Button>
           .
         </p>

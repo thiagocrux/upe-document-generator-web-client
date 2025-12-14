@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 interface LockSectionProps {
@@ -5,6 +6,8 @@ interface LockSectionProps {
 }
 
 export default function LockSection({ className = '' }: LockSectionProps) {
+  const t = useTranslations('components.features.auth.LockSection');
+
   return (
     <div
       className={`hidden md:flex flex-col justify-center items-center sm:p-12 px-6 w-full text-center ${className}`}
@@ -13,11 +16,8 @@ export default function LockSection({ className = '' }: LockSectionProps) {
         <Image src="/svgs/lock.svg" width="500" height="500" alt="" />
       </div>
       <div className="flex flex-col gap-y-4">
-        <p className="font-bold text-xl">Segurança em primeiro lugar</p>
-        <p className="text-gray-500 text-sm">
-          Utilizamos criptografia de ponta para garantir que seus documentos e
-          dados escolares estejam sempre protegidos.
-        </p>
+        <p className="font-bold text-xl">{t('title')}</p>
+        <p className="text-gray-500 text-sm">{t('subtitle')}</p>
       </div>
     </div>
   );

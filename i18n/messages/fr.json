@@ -1,94 +1,243 @@
 {
   "applicationTitle": "Gestionnaire de documents",
   "applicationDescription": "",
-  "helloWorld": "Bonjour le monde!",
 
-  "NotFoundPage": {
-    "metadata": {
-      "title": "404 - Page non trouvée",
-      "description": "La page que vous recherchez n'existe pas."
-    }
-  },
-
-  "PassowordRecoveryPage": {
-    "metadata": {
-      "title": "Page de récupération du mot de passe",
-      "description": ""
-    }
-  },
-  "SignInPage": {
-    "metadata": {
-      "title": "Page de connexion",
-      "description": ""
-    }
-  },
-  "SignUpPage": {
-    "metadata": {
-      "title": "Page d'inscription",
-      "description": ""
-    }
-  },
-
-  "AboutPage": {
-    "metadata": {
-      "title": "Page d'informations sur le système",
-      "description": ""
-    }
-  },
-  "DocumentsPage": {
-    "metadata": {
-      "title": "Page des documents",
-      "description": ""
-    }
-  },
-  "DocumentsFormPage": {
-    "metadata": {
-      "description": ""
-    }
-  },
-  "InternshipsPage": {
-    "metadata": {
-      "title": "Page des stages",
-      "description": ""
-    }
-  },
-  "InternshipsFormPage": {
-    "metadata": {
-      "title": "Page de formulaire de stages",
-      "description": ""
-    }
-  },
-  "MePage": {
-    "metadata": {
-      "title": "Page de l'étudiant",
-      "description": ""
-    }
-  },
-  "MeFormPage": {
-    "metadata": {
-      "title": "Page de formulaire de l'étudiant",
-      "description": ""
-    }
-  },
-  "SettingsPage": {
-    "metadata": {
-      "title": "Page des paramètres du système",
-      "description": ""
-    }
-  },
-
-  "Components": {
-    "ThemeSwitcher": {
-      "lightTheme": "Thème clair",
-      "darkTheme": "Thème sombre"
+  "pages": {
+    "NotFoundPage": {
+      "metadata": {
+        "title": "404 - Page non trouvée",
+        "description": "La page que vous recherchez n'existe pas."
+      }
     },
-    "Sidebar": {
-      "Links": {
-        "Home": "Accueil",
-        "NewInternship": "Nouveau stage",
-        "MyDocuments": "Mes documents",
-        "Settings": "Paramètres"
+
+    "auth": {
+      "PasswordRecoveryPage": {
+        "metadata": {
+          "title": "Page de récupération du mot de passe",
+          "description": ""
+        }
+      },
+      "SignInPage": {
+        "metadata": {
+          "title": "Page d'accès",
+          "description": ""
+        },
+        "title": "Bon retour",
+        "subtitle": "Saisissez vos identifiants pour accéder.",
+        "buttons": {
+          "notRegisteredYet": {
+            "text": "Vous n'avez pas de compte ?",
+            "link": "Inscrivez-vous"
+          }
+        },
+        "form": {
+          "inputs": {
+            "email": {
+              "label": "E-mail",
+              "placeholder": "Saisissez votre e-mail"
+            },
+            "password": {
+              "label": "Mot de passe",
+              "placeholder": "Saisissez votre mot de passe"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "forgotPassword": "Mot de passe oublié ?",
+            "submit": "Se connecter"
+          }
+        }
+      },
+      "SignUpPage": {
+        "metadata": {
+          "title": "Page d'inscription",
+          "description": ""
+        },
+        "title": "Créez votre compte",
+        "subtitle": "Commençons votre inscription pour générer des documents exceptionnels.",
+        "buttons": {
+          "alreadyRegistered": {
+            "text": "Vous avez déjà un compte ?",
+            "link": "Connectez-vous"
+          }
+        },
+        "form": {
+          "inputs": {
+            "fullName": {
+              "label": "Nom complet",
+              "placeholder": "Saisissez votre e-mail institutionnel"
+            },
+            "cpf": {
+              "label": "CPF",
+              "placeholder": "Saisissez votre CPF"
+            },
+            "course": {
+              "label": "Cours",
+              "placeholder": "Saisissez votre cours"
+            },
+            "email": {
+              "label": "E-mail institutionnel",
+              "placeholder": "Saisissez votre e-mail institutionnel"
+            },
+            "password": {
+              "label": "Mot de passe",
+              "placeholder": "Saisissez votre mot de passe"
+            },
+            "passwordConfirmation": {
+              "label": "Confirmez le mot de passe",
+              "placeholder": "Confirmez votre mot de passe"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "submit": "S'inscrire"
+          }
+        }
+      }
+    },
+
+    "internal": {
+      "AboutPage": {
+        "metadata": {
+          "title": "Page d'informations sur le système",
+          "description": ""
+        }
+      },
+      "DocumentsPage": {
+        "metadata": {
+          "title": "Page des documents",
+          "description": ""
+        }
+      },
+      "DocumentsFormPage": {
+        "metadata": {
+          "description": ""
+        }
+      },
+      "InternshipsPage": {
+        "metadata": {
+          "title": "Page des stages",
+          "description": ""
+        }
+      },
+      "InternshipsFormPage": {
+        "metadata": {
+          "title": "Page de formulaire de stages",
+          "description": ""
+        }
+      },
+      "MePage": {
+        "metadata": {
+          "title": "Page de l'étudiant",
+          "description": ""
+        }
+      },
+      "MeFormPage": {
+        "metadata": {
+          "title": "Page de formulaire de l'étudiant",
+          "description": ""
+        }
+      },
+      "SettingsPage": {
+        "metadata": {
+          "title": "Page des paramètres du système",
+          "description": ""
+        }
       }
     }
+  },
+
+  "components": {
+    "common": {
+      "ThemeSwitcher": {
+        "lightTheme": "Thème clair",
+        "darkTheme": "Thème sombre"
+      }
+    },
+
+    "features": {
+      "auth": {
+        "InteractiveMapSection": {
+          "title": "Explorez les écoles à proximité",
+          "subtitle": "Utilisez notre carte interactive pour trouver les meilleures institutions éducatives de votre région en un seul clic.",
+          "openMapButton": "Ouvrir la carte"
+        },
+        "LockSection": {
+          "title": "La sécurité avant tout",
+          "subtitle": "Nous utilisons un chiffrement de pointe pour garantir que vos documents et données scolaires soient toujours protégés."
+        },
+        "PasswordRecoverySection": {
+          "passwordSolicitationVariant": {
+            "title": "Mot de passe oublié ?",
+            "subtitle": "Ne vous inquiétez pas, cela arrive. Saisissez votre e-mail ci-dessous pour recevoir les instructions de récupération.",
+            "buttons": {
+              "redirectToLogin": "Retour à la connexion"
+            },
+            "form": {
+              "inputs": {
+                "registeredEmail": {
+                  "label": "E-mail enregistré",
+                  "placeholder": "Saisissez l’e-mail enregistré"
+                }
+              },
+              "buttons": {
+                "submit": "Envoyer les instructions"
+              }
+            }
+          },
+          "generatedLinkVariant": {
+            "title": "Vérifiez votre e-mail",
+            "subtitle": "Nous avons envoyé un lien de récupération à <strong>{email}</strong>.",
+            "linkNotReceivedText": "Vous ne l'avez pas reçu ? Vérifiez votre dossier spam ou réessayez.",
+            "buttons": {
+              "redirectToLogin": "Retour à la connexion"
+            }
+          },
+          "expiredLinkVariant": {
+            "title": "Lien expiré",
+            "subtitle": "Le lien de récupération a expiré ou a déjà été utilisé. Veuillez demander une nouvelle réinitialisation.",
+            "buttons": {
+              "requestAgain": "Demander à nouveau",
+              "redirectToLogin": "Retour à la connexion"
+            }
+          },
+          "newPasswordFormVariant": {
+            "title": "Créer un nouveau mot de passe",
+            "subtitle": "Votre nouveau mot de passe doit être différent des précédents.",
+            "buttons": {
+              "redirectToLogin": "Retour à la connexion"
+            },
+            "form": {
+              "inputs": {
+                "newPassword": {
+                  "label": "Nouveau mot de passe",
+                  "placeholder": "Saisissez le nouveau mot de passe"
+                },
+                "newPasswordConfirmation": {
+                  "label": "Confirmez le mot de passe",
+                  "placeholder": "Confirmez le nouveau mot de passe"
+                }
+              },
+              "buttons": {
+                "submit": "Réinitialiser le mot de passe"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "layout": {
+      "Sidebar": {
+        "links": {
+          "Home": "Accueil",
+          "NewInternship": "Nouveau stage",
+          "MyDocuments": "Mes documents",
+          "Settings": "Paramètres"
+        }
+      }
+    },
+
+    "ui": {}
   }
 }

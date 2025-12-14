@@ -11,7 +11,7 @@
     },
 
     "auth": {
-      "PassowordRecoveryPage": {
+      "PasswordRecoveryPage": {
         "metadata": {
           "title": "Página de recuperação de senha",
           "description": ""
@@ -21,12 +21,77 @@
         "metadata": {
           "title": "Página de acesso",
           "description": ""
+        },
+        "title": "Bem-vindo de volta",
+        "subtitle": "Insira suas credenciais para acessar.",
+        "buttons": {
+          "notRegisteredYet": {
+            "text": "Não tem uma conta?",
+            "link": "Cadastre-se"
+          }
+        },
+        "form": {
+          "inputs": {
+            "email": {
+              "label": "E-mail",
+              "placeholder": "Insira o seu e-mail"
+            },
+            "password": {
+              "label": "Senha",
+              "placeholder": "Insira a sua senha"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "forgotPassword": "Esqueceu a senha?",
+            "submit": "Entrar"
+          }
         }
       },
       "SignUpPage": {
         "metadata": {
           "title": "Página de cadastro",
           "description": ""
+        },
+        "title": "Crie sua conta",
+        "subtitle": "Vamos começar seu cadastro para gerar documentos incríveis.",
+        "buttons": {
+          "alreadyRegistered": {
+            "text": "Já tem uma conta?",
+            "link": "Faça o login"
+          }
+        },
+        "form": {
+          "inputs": {
+            "fullName": {
+              "label": "Nome completo",
+              "placeholder": "Insira o seu e-mail institucional"
+            },
+            "cpf": {
+              "label": "CPF",
+              "placeholder": "Insira o seu CPF"
+            },
+            "course": {
+              "label": "Curso",
+              "placeholder": "Insira o seu curso"
+            },
+            "email": {
+              "label": "E-mail institucional",
+              "placeholder": "Insira o seu e-mail institucional"
+            },
+            "password": {
+              "label": "Senha",
+              "placeholder": "Insira a sua senha"
+            },
+            "passwordConfirmation": {
+              "label": "Confirme a senha",
+              "placeholder": "Confirme a sua senha"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "submit": "Cadastrar"
+          }
         }
       }
     },
@@ -91,7 +156,77 @@
       }
     },
 
-    "features": {},
+    "features": {
+      "auth": {
+        "InteractiveMapSection": {
+          "title": "Explore escolas próximas",
+          "subtitle": "Use nosso mapa interativo para encontrar as melhores instituições de ensino na sua região com apenas um clique.",
+          "openMapButton": "Abrir Mapa"
+        },
+        "LockSection": {
+          "title": "Segurança em primeiro lugar",
+          "subtitle": "Utilizamos criptografia de ponta para garantir que seus documentos e dados escolares estejam sempre protegidos."
+        },
+        "PasswordRecoverySection": {
+          "passwordSolicitationVariant": {
+            "title": "Esqueceu a senha?",
+            "subtitle": "Não se preocupe, acontece. Digite seu e-mail abaixo para receber as instruções de recuperação.",
+            "buttons": {
+              "redirectToLogin": "Voltar para o login"
+            },
+            "form": {
+              "inputs": {
+                "registeredEmail": {
+                  "label": "E-mail cadastrado",
+                  "placeholder": "Insira o e-mail cadastrado"
+                }
+              },
+              "buttons": {
+                "submit": "Enviar instruções"
+              }
+            }
+          },
+          "generatedLinkVariant": {
+            "title": "Verifique o seu e-mail",
+            "subtitle": "Enviamos um link de recuperação para <strong>{email}</strong>.",
+            "linkNotReceivedText": "Não recebeu? Verifique sua caixa de spam ou tente novamente.",
+            "buttons": {
+              "redirectToLogin": "Voltar para o login"
+            }
+          },
+          "expiredLinkVariant": {
+            "title": "Link expirado",
+            "subtitle": "O link de recuperação perdeu a validade ou já foi utilizado. Por favor, solicite uma nova troca de senha.",
+            "buttons": {
+              "requestAgain": "Solicitar novamente",
+              "redirectToLogin": "Voltar para o login"
+            }
+          },
+          "newPasswordFormVariant": {
+            "title": "Criar nova senha",
+            "subtitle": "Sua nova senha deve ser diferente das senhas utilizadas anteriormente.",
+            "buttons": {
+              "redirectToLogin": "Voltar para o login"
+            },
+            "form": {
+              "inputs": {
+                "newPassword": {
+                  "label": "Nova senha",
+                  "placeholder": "Insira a nova senha"
+                },
+                "newPasswordConfirmation": {
+                  "label": "Confirme a senha",
+                  "placeholder": "Confirme a nova senha"
+                }
+              },
+              "buttons": {
+                "submit": "Redefinir senha"
+              }
+            }
+          }
+        }
+      }
+    },
 
     "layout": {
       "Sidebar": {

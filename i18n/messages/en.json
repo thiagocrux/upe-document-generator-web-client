@@ -11,7 +11,7 @@
     },
 
     "auth": {
-      "PassowordRecoveryPage": {
+      "PasswordRecoveryPage": {
         "metadata": {
           "title": "Forgot Password Page",
           "description": ""
@@ -19,14 +19,79 @@
       },
       "SignInPage": {
         "metadata": {
-          "title": "Sign In Page",
+          "title": "Sign-in Page",
           "description": ""
+        },
+        "title": "Welcome back",
+        "subtitle": "Enter your credentials to access.",
+        "buttons": {
+          "notRegisteredYet": {
+            "text": "Don't have an account?",
+            "link": "Sign up"
+          }
+        },
+        "form": {
+          "inputs": {
+            "email": {
+              "label": "Email",
+              "placeholder": "Enter your email"
+            },
+            "password": {
+              "label": "Password",
+              "placeholder": "Enter your password"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "forgotPassword": "Forgot your password?",
+            "submit": "Sign in"
+          }
         }
       },
       "SignUpPage": {
         "metadata": {
-          "title": "Sign Up Page",
+          "title": "Sign-up Page",
           "description": ""
+        },
+        "title": "Create your account",
+        "subtitle": "Let's start your registration to generate amazing documents.",
+        "buttons": {
+          "alreadyRegistered": {
+            "text": "Already have an account?",
+            "link": "Log in"
+          }
+        },
+        "form": {
+          "inputs": {
+            "fullName": {
+              "label": "Full name",
+              "placeholder": "Enter your institutional email"
+            },
+            "cpf": {
+              "label": "CPF",
+              "placeholder": "Enter your CPF"
+            },
+            "course": {
+              "label": "Course",
+              "placeholder": "Enter your course"
+            },
+            "email": {
+              "label": "Institutional email",
+              "placeholder": "Enter your institutional email"
+            },
+            "password": {
+              "label": "Password",
+              "placeholder": "Enter your password"
+            },
+            "passwordConfirmation": {
+              "label": "Confirm password",
+              "placeholder": "Confirm your password"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "submit": "Sign up"
+          }
         }
       }
     },
@@ -91,7 +156,77 @@
       }
     },
 
-    "features": {},
+    "features": {
+      "auth": {
+        "InteractiveMapSection": {
+          "title": "Explore nearby schools",
+          "subtitle": "Use our interactive map to find the best educational institutions in your area with just one click.",
+          "openMapButton": "Open Map"
+        },
+        "LockSection": {
+          "title": "Security first",
+          "subtitle": "We use advanced encryption to ensure your school documents and data are always protected."
+        },
+        "PasswordRecoverySection": {
+          "passwordSolicitationVariant": {
+            "title": "Forgot your password?",
+            "subtitle": "Don’t worry, it happens. Enter your email below to receive recovery instructions.",
+            "buttons": {
+              "redirectToLogin": "Back to login"
+            },
+            "form": {
+              "inputs": {
+                "registeredEmail": {
+                  "label": "Registered email",
+                  "placeholder": "Enter the registered email"
+                }
+              },
+              "buttons": {
+                "submit": "Send instructions"
+              }
+            }
+          },
+          "generatedLinkVariant": {
+            "title": "Check your email",
+            "subtitle": "We’ve sent a recovery link to <strong>{email}</strong>.",
+            "linkNotReceivedText": "Didn't receive it? Check your spam folder or try again.",
+            "buttons": {
+              "redirectToLogin": "Back to login"
+            }
+          },
+          "expiredLinkVariant": {
+            "title": "Expired link",
+            "subtitle": "The recovery link has expired or has already been used. Please request a new password reset.",
+            "buttons": {
+              "requestAgain": "Request again",
+              "redirectToLogin": "Back to login"
+            }
+          },
+          "newPasswordFormVariant": {
+            "title": "Create new password",
+            "subtitle": "Your new password must be different from previously used passwords.",
+            "buttons": {
+              "redirectToLogin": "Back to login"
+            },
+            "form": {
+              "inputs": {
+                "newPassword": {
+                  "label": "New password",
+                  "placeholder": "Enter the new password"
+                },
+                "newPasswordConfirmation": {
+                  "label": "Confirm password",
+                  "placeholder": "Confirm the new password"
+                }
+              },
+              "buttons": {
+                "submit": "Reset password"
+              }
+            }
+          }
+        }
+      }
+    },
 
     "layout": {
       "Sidebar": {

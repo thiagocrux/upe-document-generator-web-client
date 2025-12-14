@@ -1,6 +1,8 @@
-import { Button } from '@/components/ui/button';
 import { MapPin } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+
+import { Button } from '@/components/ui/button';
 
 interface InteractiveMapProps {
   className?: string;
@@ -9,6 +11,8 @@ interface InteractiveMapProps {
 export default function InteractiveMapSection({
   className = '',
 }: InteractiveMapProps) {
+  const t = useTranslations('components.features.auth.InteractiveMapSection');
+
   return (
     <div
       className={`hidden md:flex flex-col justify-center items-center gap-y-8 sm:p-12 px-6 w-full text-center ${className}`}
@@ -17,15 +21,12 @@ export default function InteractiveMapSection({
         <Image src="/svgs/map.svg" width="500" height="500" alt="fsafds" />
       </div>
       <div className="flex flex-col gap-y-4">
-        <p className="font-bold text-2xl">Explore escolas próximas</p>
-        <p className="text-sm">
-          Use nosso mapa interativo para encontrar as melhores instituições de
-          ensino na sua região com apenas um clique.
-        </p>
+        <p className="font-bold text-2xl">{t('title')}</p>
+        <p className="text-sm">{t('subtitle')}</p>
       </div>
       <Button size="lg" variant="outline" className="w-min">
         <MapPin />
-        <span>Abrir Mapa</span>
+        <span>{t('openMapButton')}</span>
       </Button>
     </div>
   );

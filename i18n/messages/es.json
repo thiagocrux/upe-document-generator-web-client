@@ -11,7 +11,7 @@
     },
 
     "auth": {
-      "PassowordRecoveryPage": {
+      "PasswordRecoveryPage": {
         "metadata": {
           "title": "Página de recuperación de contraseña",
           "description": ""
@@ -19,14 +19,79 @@
       },
       "SignInPage": {
         "metadata": {
-          "title": "Página de inicio de sesión",
+          "title": "Página de acceso",
           "description": ""
+        },
+        "title": "Bienvenido de nuevo",
+        "subtitle": "Ingrese sus credenciales para acceder.",
+        "buttons": {
+          "notRegisteredYet": {
+            "text": "¿No tienes una cuenta?",
+            "link": "Regístrate"
+          }
+        },
+        "form": {
+          "inputs": {
+            "email": {
+              "label": "Correo electrónico",
+              "placeholder": "Ingrese su correo electrónico"
+            },
+            "password": {
+              "label": "Contraseña",
+              "placeholder": "Ingrese su contraseña"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "forgotPassword": "¿Olvidaste tu contraseña?",
+            "submit": "Iniciar sesión"
+          }
         }
       },
       "SignUpPage": {
         "metadata": {
           "title": "Página de registro",
           "description": ""
+        },
+        "title": "Crea tu cuenta",
+        "subtitle": "Comencemos tu registro para generar documentos increíbles.",
+        "buttons": {
+          "alreadyRegistered": {
+            "text": "¿Ya tienes una cuenta?",
+            "link": "Inicia sesión"
+          }
+        },
+        "form": {
+          "inputs": {
+            "fullName": {
+              "label": "Nombre completo",
+              "placeholder": "Ingresa tu correo institucional"
+            },
+            "cpf": {
+              "label": "CPF",
+              "placeholder": "Ingresa tu CPF"
+            },
+            "course": {
+              "label": "Curso",
+              "placeholder": "Ingresa tu curso"
+            },
+            "email": {
+              "label": "Correo institucional",
+              "placeholder": "Ingresa tu correo institucional"
+            },
+            "password": {
+              "label": "Contraseña",
+              "placeholder": "Ingresa tu contraseña"
+            },
+            "passwordConfirmation": {
+              "label": "Confirma la contraseña",
+              "placeholder": "Confirma tu contraseña"
+            }
+          },
+          "errors": {},
+          "buttons": {
+            "submit": "Registrarse"
+          }
         }
       }
     },
@@ -91,7 +156,77 @@
       }
     },
 
-    "features": {},
+    "features": {
+      "auth": {
+        "InteractiveMapSection": {
+          "title": "Explore escuelas cercanas",
+          "subtitle": "Utilice nuestro mapa interactivo para encontrar las mejores instituciones educativas en su región con un solo clic.",
+          "openMapButton": "Abrir mapa"
+        },
+        "LockSection": {
+          "title": "Seguridad ante todo",
+          "subtitle": "Utilizamos cifrado de alto nivel para garantizar que sus documentos y datos escolares estén siempre protegidos."
+        },
+        "PasswordRecoverySection": {
+          "passwordSolicitationVariant": {
+            "title": "¿Olvidaste tu contraseña?",
+            "subtitle": "No te preocupes, sucede. Ingresa tu correo electrónico abajo para recibir las instrucciones de recuperación.",
+            "buttons": {
+              "redirectToLogin": "Volver al inicio de sesión"
+            },
+            "form": {
+              "inputs": {
+                "registeredEmail": {
+                  "label": "Correo registrado",
+                  "placeholder": "Ingresa el correo registrado"
+                }
+              },
+              "buttons": {
+                "submit": "Enviar instrucciones"
+              }
+            }
+          },
+          "generatedLinkVariant": {
+            "title": "Revisa tu correo",
+            "subtitle": "Hemos enviado un enlace de recuperación a <strong>{email}</strong>.",
+            "linkNotReceivedText": "¿No lo recibiste? Revisa tu carpeta de spam o inténtalo de nuevo.",
+            "buttons": {
+              "redirectToLogin": "Volver al inicio de sesión"
+            }
+          },
+          "expiredLinkVariant": {
+            "title": "Enlace expirado",
+            "subtitle": "El enlace de recuperación ha expirado o ya fue utilizado. Por favor, solicita un nuevo cambio de contraseña.",
+            "buttons": {
+              "requestAgain": "Solicitar nuevamente",
+              "redirectToLogin": "Volver al inicio de sesión"
+            }
+          },
+          "newPasswordFormVariant": {
+            "title": "Crear nueva contraseña",
+            "subtitle": "Tu nueva contraseña debe ser diferente de las utilizadas anteriormente.",
+            "buttons": {
+              "redirectToLogin": "Volver al inicio de sesión"
+            },
+            "form": {
+              "inputs": {
+                "newPassword": {
+                  "label": "Nueva contraseña",
+                  "placeholder": "Ingresa la nueva contraseña"
+                },
+                "newPasswordConfirmation": {
+                  "label": "Confirma la contraseña",
+                  "placeholder": "Confirma la nueva contraseña"
+                }
+              },
+              "buttons": {
+                "submit": "Restablecer contraseña"
+              }
+            }
+          }
+        }
+      }
+    },
 
     "layout": {
       "Sidebar": {

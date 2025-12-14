@@ -24,72 +24,72 @@ export async function generateMetadata({
 }
 
 export default function SignUpPage() {
-  const t = useTranslations();
+  const t = useTranslations('pages.auth.SignUpPage');
 
   return (
     <>
       <div className="flex flex-col gap-y-8 p-6 sm:p-12 w-full">
         <div className="flex flex-col gap-y-2">
-          <p className="font-bold text-2xl">Crie sua conta</p>
-          <p className="text-gray-500 text-sm">
-            Vamos começar seu cadastro para gerar documentos incríveis.
-          </p>
+          <p className="font-bold text-2xl">{t('title')}</p>
+          <p className="text-gray-500 text-sm">{t('subtitle')}</p>
         </div>
         <div className="flex flex-col gap-y-4">
           <div>
-            <Label>Nome completo</Label>
+            <Label>{t('form.inputs.fullName.label')}</Label>
             <Input
-              placeholder="Insira o seu nome completo"
+              placeholder={t('form.inputs.fullName.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
           <div>
-            <Label>CPF</Label>
+            <Label>{t('form.inputs.cpf.label')}</Label>
             <Input
-              placeholder="Insira o seu CPF"
+              placeholder={t('form.inputs.cpf.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
           <div>
-            <Label>Curso</Label>
+            <Label>{t('form.inputs.course.label')}</Label>
             <Input
-              placeholder="Insira o seu curso"
+              placeholder={t('form.inputs.course.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
           <div>
-            <Label>E-mail institucional</Label>
+            <Label>{t('form.inputs.email.label')}</Label>
             <Input
               type="email"
-              placeholder="Insira o seu e-mail institucional"
+              placeholder={t('form.inputs.email.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
           <div>
-            <Label>Senha</Label>
+            <Label>{t('form.inputs.password.label')}</Label>
             <Input
               type="password"
-              placeholder="Insira a sua senha"
+              placeholder={t('form.inputs.password.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
           <div>
-            <Label>Confirme a senha</Label>
+            <Label>{t('form.inputs.passwordConfirmation.label')}</Label>
             <Input
               type="password"
-              placeholder="Confirme a sua senha"
+              placeholder={t('form.inputs.passwordConfirmation.placeholder')}
               className="mt-1 placeholder:text-sm"
             />
           </div>
         </div>
         {/* TODO: Implement form and submit functionalities. */}
         <Button size="lg" className="w-full">
-          Cadastrar
+          {t('form.buttons.submit')}
         </Button>
         <p className="text-gray-500 text-sm text-center">
-          Já tem uma conta?{' '}
+          {t('buttons.alreadyRegistered.text')}{' '}
           <Button variant="link" className="p-0 font-bold">
-            <Link href="/auth/sign-in">Faça login</Link>
+            <Link href="/auth/sign-in">
+              {t('buttons.alreadyRegistered.link')}
+            </Link>
           </Button>
           .
         </p>
