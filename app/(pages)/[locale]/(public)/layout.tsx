@@ -38,6 +38,3 @@ export default async function RootLayout({
     </>
   );
 }
-{
-  /* <div className="flex items-stretch"></div> */
-}
