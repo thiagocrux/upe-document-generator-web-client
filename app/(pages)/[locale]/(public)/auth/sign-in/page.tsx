@@ -3,11 +3,11 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
-import InteractiveMapSection from '@/components/features/auth/InteractiveMapSection';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
+import InteractiveMapSection from '@/app/components/features/auth/InteractiveMapSection';
+import { Button } from '@/app/components/ui/button';
+import { Input } from '@/app/components/ui/input';
+import { Label } from '@/app/components/ui/label';
+import { Separator } from '@/app/components/ui/separator';
 
 export async function generateMetadata({
   params,

@@ -5,7 +5,7 @@ import PasswordRecoverySection from './PasswordRecoverySection';
 // TODO: Increment tests.
 describe('PasswordRecoverySection', () => {
   it('', () => {
-    render(<PasswordRecoverySection variant="solicitation" />);
+    render(<PasswordRecoverySection variant="password-solicitation" />);
 
     const section = screen.getByText('Esqueceu a senha?');
 

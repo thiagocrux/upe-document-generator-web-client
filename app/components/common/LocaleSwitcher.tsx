@@ -12,7 +12,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from '@/app/components/ui/select';
 import { DEFAULT_LOCALE } from '@/config/constants';
 import Image from 'next/image';
 

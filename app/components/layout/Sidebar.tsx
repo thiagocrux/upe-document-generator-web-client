@@ -1,6 +1,6 @@
 'use client';
 
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '@/app/components/ui/separator';
 import { BriefcaseBusiness, Cog, FilePlus, House } from 'lucide-react';
 import Link from 'next/link';
 import { ReactNode } from 'react';

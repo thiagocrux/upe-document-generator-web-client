@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
-import LocaleSwitcher from '@/components/common/LocaleSwitcher';
-import Logo from '@/components/common/Logo';
-import ThemeSwitcher from '@/components/common/ThemeSwitcher';
-import Sidebar from '@/components/layout/Sidebar';
+import LocaleSwitcher from '@/app/components/common/LocaleSwitcher';
+import Logo from '@/app/components/common/Logo';
+import ThemeSwitcher from '@/app/components/common/ThemeSwitcher';
+import Sidebar from '@/app/components/layout/Sidebar';
 
 export async function generateMetadata({
   params,

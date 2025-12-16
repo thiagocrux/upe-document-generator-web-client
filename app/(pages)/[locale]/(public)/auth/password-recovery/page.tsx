@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-import LockSection from '@/components/features/auth/LockSection';
-import PasswordRecoverySection from '@/components/features/auth/PasswordRecoverySection';
-import { Separator } from '@/components/ui/separator';
+import LockSection from '@/app/components/features/auth/LockSection';
+import PasswordRecoverySection from '@/app/components/features/auth/PasswordRecoverySection';
+import { Separator } from '@/app/components/ui/separator';
 
 export async function generateMetadata({
   params,

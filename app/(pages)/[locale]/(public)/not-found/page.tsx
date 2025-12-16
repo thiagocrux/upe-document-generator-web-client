@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/app/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 

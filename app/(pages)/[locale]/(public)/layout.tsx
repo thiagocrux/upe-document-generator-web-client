@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
-import LocaleSwitcher from '@/components/common/LocaleSwitcher';
-import ThemeSwitcher from '@/components/common/ThemeSwitcher';
-import { Card } from '@/components/ui/card';
+import LocaleSwitcher from '@/app/components/common/LocaleSwitcher';
+import ThemeSwitcher from '@/app/components/common/ThemeSwitcher';
+import { Card } from '@/app/components/ui/card';
 
 export async function generateMetadata({
   params,
