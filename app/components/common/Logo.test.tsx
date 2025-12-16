@@ -7,7 +7,7 @@ describe('Logo', () => {
   it('renders the component', () => {
     render(<Logo />);
 
-    const logo = screen.getByText('LOGO');
+    const logo = screen.getByRole('paragraph');
 
     expect(logo).toBeTruthy();
   });
