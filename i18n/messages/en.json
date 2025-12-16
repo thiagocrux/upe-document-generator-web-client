@@ -7,7 +7,10 @@
       "metadata": {
         "title": "404 - Page Not Found",
         "description": "The page you tried to access does not exist."
-      }
+      },
+      "title": "Oops! It looks like we got lost.",
+      "description": "The page you're looking for doesn't exist or has been moved to another address.",
+      "button": "Back to the start"
     },
 
     "auth": {
