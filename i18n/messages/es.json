@@ -112,6 +112,42 @@
           "description": ""
         }
       },
+      "InternshipAgreementFormPage": {
+        "metadata": {
+          "title": "Formulario de convenio de prácticas",
+          "description": ""
+        }
+      },
+      "InternshipAgreementDetailsPage": {
+        "metadata": {
+          "title": "Detalles del convenio de prácticas",
+          "description": ""
+        }
+      },
+      "InternshipReferralFormPage": {
+        "metadata": {
+          "title": "Formulario de derivación de prácticas",
+          "description": ""
+        }
+      },
+      "InternshipReferralDetailsPage": {
+        "metadata": {
+          "title": "Detalles de la derivación de prácticas",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementFormPage": {
+        "metadata": {
+          "title": "Formulario de declaración de supervisión de prácticas",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementDetailsPage": {
+        "metadata": {
+          "title": "Detalles de la declaración de supervisión de prácticas",
+          "description": ""
+        }
+      },
       "InternshipsPage": {
         "metadata": {
           "title": "Página de pasantías",

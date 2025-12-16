@@ -5,13 +5,13 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
 import ptBRMessages from '@/i18n/messages/pt-BR.json';
-import DocumentsFormPage from './page';
+import InternshipSupervisionStatementDetailsPage from './page';
 
-describe('DocumentsFormPage', () => {
+describe('InternshipSupervisionStatementDetailsPage', () => {
   it('renders a paragraph with the title of the page', async () => {
     render(
       <NextIntlClientProvider locale="pt-BR" messages={ptBRMessages}>
-        <DocumentsFormPage />
+        <InternshipSupervisionStatementDetailsPage />
       </NextIntlClientProvider>
     );
 
@@ -20,7 +20,8 @@ describe('DocumentsFormPage', () => {
 
     expect(paragraph).toBeInTheDocument();
     expect(t(paragraph.textContent.trim())).toBe(
-      'Página de formulário de documentos'
+      ptBRMessages.pages.internal.InternshipSupervisionStatementDetailsPage
+        .metadata.title
     );
   });
 });

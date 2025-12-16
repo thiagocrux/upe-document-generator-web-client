@@ -112,6 +112,42 @@
           "description": ""
         }
       },
+      "InternshipAgreementFormPage": {
+        "metadata": {
+          "title": "Formulário de termo de compromisso de estágio",
+          "description": ""
+        }
+      },
+      "InternshipAgreementDetailsPage": {
+        "metadata": {
+          "title": "Detalhes de termo de compromisso de estágio",
+          "description": ""
+        }
+      },
+      "InternshipReferralFormPage": {
+        "metadata": {
+          "title": "Formulário de termo de encaminhamento de estágio",
+          "description": ""
+        }
+      },
+      "InternshipReferralDetailsPage": {
+        "metadata": {
+          "title": "Detalhes de termo de encaminhamento de estágio",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementFormPage": {
+        "metadata": {
+          "title": "Formulário de declaração de supervisão de estágio",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementDetailsPage": {
+        "metadata": {
+          "title": "Detalhes de declaração de supervisão de estágio",
+          "description": ""
+        }
+      },
       "InternshipsPage": {
         "metadata": {
           "title": "Página de estágios",

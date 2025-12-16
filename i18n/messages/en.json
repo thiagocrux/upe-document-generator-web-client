@@ -112,6 +112,42 @@
           "description": ""
         }
       },
+      "InternshipAgreementFormPage": {
+        "metadata": {
+          "title": "Internship Agreement Form",
+          "description": ""
+        }
+      },
+      "InternshipAgreementDetailsPage": {
+        "metadata": {
+          "title": "Internship Agreement Details",
+          "description": ""
+        }
+      },
+      "InternshipReferralFormPage": {
+        "metadata": {
+          "title": "Internship Referral Form",
+          "description": ""
+        }
+      },
+      "InternshipReferralDetailsPage": {
+        "metadata": {
+          "title": "Internship Referral Details",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementFormPage": {
+        "metadata": {
+          "title": "Internship Supervision Statement Form",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementDetailsPage": {
+        "metadata": {
+          "title": "Internship Supervision Statement Details",
+          "description": ""
+        }
+      },
       "InternshipsPage": {
         "metadata": {
           "title": "Internships Page",

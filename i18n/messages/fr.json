@@ -117,6 +117,42 @@
           "description": ""
         }
       },
+      "InternshipAgreementFormPage": {
+        "metadata": {
+          "title": "Formulaire de convention de stage",
+          "description": ""
+        }
+      },
+      "InternshipAgreementDetailsPage": {
+        "metadata": {
+          "title": "Détails de la convention de stage",
+          "description": ""
+        }
+      },
+      "InternshipReferralFormPage": {
+        "metadata": {
+          "title": "Formulaire d'orientation de stage",
+          "description": ""
+        }
+      },
+      "InternshipReferralDetailsPage": {
+        "metadata": {
+          "title": "Détails de l'orientation de stage",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementFormPage": {
+        "metadata": {
+          "title": "Formulaire de déclaration de supervision de stage",
+          "description": ""
+        }
+      },
+      "InternshipSupervisionStatementDetailsPage": {
+        "metadata": {
+          "title": "Détails de la déclaration de supervision de stage",
+          "description": ""
+        }
+      },
       "InternshipsPage": {
         "metadata": {
           "title": "Page des stages",
@@ -233,10 +269,10 @@
     "layout": {
       "Sidebar": {
         "links": {
-          "Home": "Accueil",
-          "NewInternship": "Nouveau stage",
-          "MyDocuments": "Mes documents",
-          "Settings": "Paramètres"
+          "home": "Accueil",
+          "newInternship": "Nouveau stage",
+          "myDocuments": "Mes documents",
+          "settings": "Paramètres"
         }
       }
     },
