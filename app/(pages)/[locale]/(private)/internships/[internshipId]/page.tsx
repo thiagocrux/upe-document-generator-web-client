@@ -17,7 +17,7 @@ export async function generateMetadata({
 }
 
 export default function InternshipsPage() {
-  const t = useTranslations();
+  const t = useTranslations('pages.internal.InternshipsFormPage');
 
-  return <p>{t('pages.internal.InternshipsFormPage.metadata.title')}</p>;
+  return <p>{t('metadata.title')}</p>;
 }

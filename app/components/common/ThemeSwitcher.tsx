@@ -15,7 +15,7 @@ export default function ThemeSwitcher({
   showLabel = false,
   className = '',
 }: ThemeSwitcherProps) {
-  const t = useTranslations();
+  const t = useTranslations('components.common.ThemeSwitcher');
   const { setTheme, resolvedTheme } = useTheme();
 
   function handleClick() {
@@ -30,12 +30,8 @@ export default function ThemeSwitcher({
     >
       <Sun className="hidden dark:block" />
       <Moon className="dark:hidden block" />
-      {resolvedTheme === 'dark' && showLabel && (
-        <span>{t('components.common.ThemeSwitcher.lightTheme')}</span>
-      )}
-      {resolvedTheme === 'light' && showLabel && (
-        <span>{t('components.common.ThemeSwitcher.darkTheme')}</span>
-      )}
+      {resolvedTheme === 'dark' && showLabel && <span>{t('lightTheme')}</span>}
+      {resolvedTheme === 'light' && showLabel && <span>{t('darkTheme')}</span>}
     </Button>
   );
 }

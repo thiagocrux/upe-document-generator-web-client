@@ -21,7 +21,7 @@ export async function generateMetadata({
 }
 
 export default function PasswordRecoveryPage() {
-  const t = useTranslations();
+  const t = useTranslations('pages.auth.PasswordRecoveryPage');
 
   return (
     <>

@@ -17,7 +17,7 @@ export async function generateMetadata({
 }
 
 export default function MeFormPage() {
-  const t = useTranslations();
+  const t = useTranslations('pages.internal.MeFormPage');
 
-  return <p>{t('pages.internal.MeFormPage.metadata.title')}</p>;
+  return <p>{t('metadata.title')}</p>;
 }

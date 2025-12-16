@@ -17,7 +17,7 @@ export async function generateMetadata({
 }
 
 export default function SettingsPage() {
-  const t = useTranslations();
+  const t = useTranslations('pages.internal.SettingsPage');
 
-  return <p>{t('pages.internal.SettingsPage.metadata.title')}</p>;
+  return <p>{t('metadata.title')}</p>;
 }
