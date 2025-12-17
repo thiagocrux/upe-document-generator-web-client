@@ -18,7 +18,7 @@ export default function InteractiveMapSection({
       className={`hidden md:flex flex-col justify-center items-center gap-y-8 sm:p-12 px-6 w-full text-center ${className}`}
     >
       <div className="">
-        <Image src="/svgs/map.svg" width="500" height="500" alt="fsafds" />
+        <Image src="/svgs/map.svg" width="500" height="500" alt="" />
       </div>
       <div className="flex flex-col gap-y-4">
         <p className="font-bold text-2xl">{t('title')}</p>

@@ -1,9 +1,10 @@
 'use client';
 
 import { useLocale } from 'next-intl';
+import Image from 'next/image';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-import { LOCALES } from '@/config/constants';
+import { DEFAULT_LOCALE, LOCALES } from '@/config/constants';
 
 import {
   Select,
@@ -13,8 +14,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/app/components/ui/select';
-import { DEFAULT_LOCALE } from '@/config/constants';
-import Image from 'next/image';
 
 interface LocaleSwitcherProps {
   hideLabel?: boolean;

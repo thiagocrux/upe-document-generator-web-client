@@ -1,15 +1,35 @@
 import { expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
+import { NextIntlClientProvider } from 'next-intl';
+
+import ptBRMessages from '@/i18n/messages/pt-BR.json';
 import InteractiveMapSection from './InteractiveMapSection';
 
-// TODO: Increment tests.
-describe('InteractiveMapSection', () => {
-  it('', () => {
-    render(<InteractiveMapSection />);
+describe('PasswordRecoverySection', () => {
+  beforeEach(() => {
+    render(
+      <NextIntlClientProvider locale="pt-BR" messages={ptBRMessages}>
+        <InteractiveMapSection />
+      </NextIntlClientProvider>
+    );
+  });
 
-    const section = screen.getByText('Explore escolas próximas');
+  it('renders the .svg image', () => {
+    const image = screen.getByAltText('');
+    expect(image).toHaveAttribute('src', '/svgs/map.svg');
+  });
 
-    expect(section).toBeTruthy();
-    // expect(t(paragraph.textContent.trim())).toBe('');
+  it('renders the title and subtitle of the page', async () => {
+    const paragraphs = screen.getAllByRole('paragraph');
+
+    expect(paragraphs).toHaveLength(2);
+
+    const title = paragraphs[0];
+    const subtitle = paragraphs[1];
+
+    expect(title).toHaveTextContent('Explore escolas próximas');
+    expect(subtitle).toHaveTextContent(
+      'Use nosso mapa interativo para encontrar as melhores instituições de ensino na sua região com apenas um clique.'
+    );
   });
 });

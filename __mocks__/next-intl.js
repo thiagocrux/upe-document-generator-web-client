@@ -36,11 +36,34 @@ function useTranslations(namespace) {
   const context = React.useContext(NextIntlContext);
   const messages = context?.messages || {};
 
-  return function translate(key) {
+  function translate(key) {
     const id = namespace ? `${namespace}.${key}` : key;
     const value = getNested(messages, id);
     return value ?? id;
-  };
+  }
+
+  function rich(key, values) {
+    const id = namespace ? `${namespace}.${key}` : key;
+    const value = getNested(messages, id);
+
+    if (!value) return id;
+
+    let result = value;
+    if (values) {
+      Object.keys(values).forEach((tag) => {
+        if (typeof values[tag] === 'function') {
+          const regex = new RegExp(`<${tag}>(.*?)</${tag}>`, 'g');
+          // Return content directly to avoid [object Object] from React elements in string context
+          result = result.replace(regex, (_, content) => content);
+        } else {
+          result = result.replace(`{${tag}}`, values[tag]);
+        }
+      });
+    }
+    return result;
+  }
+
+  return Object.assign(translate, { rich });
 }
 
 function useLocale() {

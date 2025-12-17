@@ -2,10 +2,10 @@ import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-
-import { Button } from '@/app/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { Button } from '@/app/components/ui/button';
 
 export async function generateMetadata({
   params,
@@ -34,13 +34,13 @@ export default function NotFoundPage() {
         <p className="text-custom-gray">{t('description')}</p>
         <Button size="lg" className="w-min select-none">
           <ArrowLeft />
-          <Link href="/auth/sign-up">{t('button')}</Link>
+          <Link href="/">{t('button')}</Link>
         </Button>
       </div>
       <div
         className={`bg-accent hidden md:flex flex-col justify-center items-center gap-y-8 sm:p-12 px-6 w-full text-center`}
       >
-        <Image src="/svgs/404.svg" width="500" height="500" alt="404" />
+        <Image src="/svgs/404.svg" width="500" height="500" alt="" />
       </div>
     </>
   );

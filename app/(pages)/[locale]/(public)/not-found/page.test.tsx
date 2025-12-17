@@ -23,9 +23,9 @@ describe('NotFoundPage', () => {
     const description = paragraphs[2];
 
     expect(errorCode).toHaveTextContent('404');
-    expect(title).toHaveTextContent(ptBRMessages.pages.NotFoundPage.title);
+    expect(title).toHaveTextContent('Ops! Parece que nos perdemos.');
     expect(description).toHaveTextContent(
-      ptBRMessages.pages.NotFoundPage.description
+      'A página que você está procurando não existe ou foi movida para outro endereço.'
     );
   });
 });

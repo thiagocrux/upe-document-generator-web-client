@@ -17,7 +17,7 @@ interface PasswordRecoverySectionProps {
 }
 
 export default function PasswordRecoverySection({
-  variant = 'password-solicitation',
+  variant = 'generated-link',
 }: PasswordRecoverySectionProps) {
   const router = useRouter();
 
