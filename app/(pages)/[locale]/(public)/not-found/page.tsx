@@ -40,7 +40,7 @@ export default function NotFoundPage() {
       <div
         className={`bg-accent hidden md:flex flex-col justify-center items-center gap-y-8 sm:p-12 px-6 w-full text-center`}
       >
-        <Image src="/svgs/404.svg" width="500" height="500" alt="" />
+        <Image src="/icons/404.svg" width="500" height="500" alt="" />
       </div>
     </>
   );

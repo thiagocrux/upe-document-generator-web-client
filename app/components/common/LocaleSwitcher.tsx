@@ -72,7 +72,7 @@ export default function LocaleSwitcher({
             <SelectItem value={locale.value} key={locale.value}>
               <div className="flex items-center gap-x-2">
                 <Image
-                  src={`/svgs/flags/${locale.icon}.svg`}
+                  src={`/icons/flags/${locale.icon}.svg`}
                   alt={locale.icon}
                   width={16}
                   height={16}

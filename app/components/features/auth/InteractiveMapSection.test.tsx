@@ -16,7 +16,7 @@ describe('PasswordRecoverySection', () => {
 
   it('renders the .svg image', () => {
     const image = screen.getByAltText('');
-    expect(image).toHaveAttribute('src', '/svgs/map.svg');
+    expect(image).toHaveAttribute('src', '/icons/map.svg');
   });
 
   it('renders the title and subtitle of the page', async () => {

@@ -13,7 +13,7 @@ export default function LockSection({ className = '' }: LockSectionProps) {
       className={`hidden md:flex flex-col justify-center items-center sm:p-12 px-6 w-full text-center ${className}`}
     >
       <div className="w-60">
-        <Image src="/svgs/lock.svg" width="500" height="500" alt="" />
+        <Image src="/icons/lock.svg" width="500" height="500" alt="" />
       </div>
       <div className="flex flex-col gap-y-4">
         <p className="font-bold text-xl">{t('title')}</p>
