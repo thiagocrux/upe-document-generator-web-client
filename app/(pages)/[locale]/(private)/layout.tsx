@@ -28,7 +28,7 @@ export default async function RootLayout({
   return (
     <div className="flex flex-1 border">
       <Sidebar className="hidden md:top-0 md:left-0 md:fixed md:flex md:h-dvh">
-        <LocaleSwitcher />
+        <LocaleSwitcher selectClasses="w-full" />
         <ThemeSwitcher showLabel />
       </Sidebar>
 

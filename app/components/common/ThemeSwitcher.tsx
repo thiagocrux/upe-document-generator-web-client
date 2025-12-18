@@ -3,6 +3,7 @@
 import { Moon, Sun } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 import { Button } from '../ui/button';
 
@@ -17,6 +18,13 @@ export default function ThemeSwitcher({
 }: ThemeSwitcherProps) {
   const t = useTranslations('components.common.ThemeSwitcher');
   const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Schedule the mounted flag to avoid calling setState synchronously inside the effect
+    const animationFrameId = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   function handleClick() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
@@ -30,8 +38,12 @@ export default function ThemeSwitcher({
     >
       <Sun className="hidden dark:block" />
       <Moon className="dark:hidden block" />
-      {resolvedTheme === 'dark' && showLabel && <span>{t('lightTheme')}</span>}
-      {resolvedTheme === 'light' && showLabel && <span>{t('darkTheme')}</span>}
+      {mounted && resolvedTheme === 'dark' && showLabel && (
+        <span>{t('lightTheme')}</span>
+      )}
+      {mounted && resolvedTheme === 'light' && showLabel && (
+        <span>{t('darkTheme')}</span>
+      )}
     </Button>
   );
 }
