@@ -1,10 +1,19 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { cookies } from 'next/headers';
+import Link from 'next/link';
 
 import LocaleSwitcher from '@/app/components/common/LocaleSwitcher';
-import Logo from '@/app/components/common/Logo';
 import ThemeSwitcher from '@/app/components/common/ThemeSwitcher';
-import Sidebar from '@/app/components/layout/Sidebar';
+import { AppSidebar } from '@/app/components/layout/AppSidebar';
+import { Button } from '@/app/components/ui/button';
+import { Separator } from '@/app/components/ui/separator';
+
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from '@/app/components/ui/sidebar';
 
 export async function generateMetadata({
   params,
@@ -25,30 +34,66 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const defaultOpen = cookieStore.get('sidebar_state')?.value === 'true';
+
   return (
-    <div className="flex flex-1 border">
-      <Sidebar className="hidden md:top-0 md:left-0 md:fixed md:flex md:h-dvh">
-        <LocaleSwitcher selectClasses="w-full" />
-        <ThemeSwitcher showLabel />
-      </Sidebar>
-
+    <SidebarProvider defaultOpen={defaultOpen}>
+      <AppSidebar />
       <div className="flex flex-col w-full">
-        <nav className="md:hidden xl:top-4 xl:right-4 xl:absolute flex xl:flex justify-between items-center gap-x-4 xl:p-0 px-6 py-4 w-full xl:w-auto">
-          <Logo className="md:hidden flex" />
-          <div className="flex items-center gap-x-2">
-            <LocaleSwitcher hideLabel selectClasses="min-w-15.5" />
-            <ThemeSwitcher />
+        <SidebarInset>
+          <header className="top-0 sticky flex justify-between items-center gap-2 bg-background p-4 border-b shrink-0">
+            <div className="flex items-center gap-2">
+              <SidebarTrigger className="-ml-1 cursor-pointer" />
+              <Separator
+                orientation="vertical"
+                className="mr-2 data-[orientation=vertical]:h-4"
+              />
+            </div>
+            <div className="flex items-center gap-x-2">
+              <LocaleSwitcher hideLabel selectClasses="min-w-15.5" />
+              <ThemeSwitcher />
+            </div>
+          </header>
+        </SidebarInset>
+        <main className="p-6 w-full h-full">
+          <div className="flex justify-center mx-auto max-w-4xl">
+            {children}
           </div>
-        </nav>
-
-        <main className="flex flex-col flex-1 items-center px-6 py-6 w-full">
-          <div className="md:ml-80 max-w-2xl">{children}</div>
         </main>
-
-        <footer className="flex md:ml-80 px-6 py-10 border-border border-t min-h-20">
-          Footer
+        <footer className="flex justify-between items-center px-4 py-3 text-muted-foreground text-xs">
+          <p>@ 2026 Placeholder</p>
+          <div className="flex items-center gap-4">
+            <Link href="#">
+              <Button
+                variant="link"
+                className="px-1 font-normal text-muted-gray text-xs cursor-pointer"
+                tabIndex={-1}
+              >
+                Configurações
+              </Button>
+            </Link>
+            <Link href="#">
+              <Button
+                variant="link"
+                className="px-1 font-normal text-muted-gray text-xs cursor-pointer"
+                tabIndex={-1}
+              >
+                Suporte
+              </Button>
+            </Link>
+            <Link href="#">
+              <Button
+                variant="link"
+                className="px-1 font-normal text-muted-gray text-xs cursor-pointer"
+                tabIndex={-1}
+              >
+                Sobre o sistema
+              </Button>
+            </Link>
+          </div>
         </footer>
       </div>
-    </div>
+    </SidebarProvider>
   );
 }

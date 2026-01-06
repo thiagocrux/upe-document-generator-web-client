@@ -68,7 +68,7 @@ export default function InternshipsPage() {
   // return <p>{t('metadata.title')}</p>;
 
   return (
-    <div className="">
+    <div className="w-full">
       {/* TRANSFORMAR EM COMPONENTE CONTENDO TITLE E SUBTITLE */}
       <div className="mb-10">
         <p className="font-semibold text-2xl">Solicitação de Estágio</p>
