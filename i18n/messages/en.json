@@ -264,6 +264,155 @@
             }
           }
         }
+      },
+      "documents": {
+        "InternshipAgreementForm": {
+          "fields": {
+            "studentName": {
+              "label": "Student name"
+            },
+            "studentSubject": {
+              "label": "Student subject"
+            },
+            "studentCpf": {
+              "label": "Student CPF"
+            },
+            "studentCourse": {
+              "label": "Student course"
+            },
+            "studentEmail": {
+              "label": "Student email"
+            },
+            "studentPhone": {
+              "label": "Student phone"
+            },
+            "internshipStartDate": {
+              "label": "Internship start date"
+            },
+            "internshipEndDate": {
+              "label": "Internship end date"
+            },
+            "internshipSchedule": {
+              "label": "Internship schedule"
+            },
+            "internshipWeeklyWorkload": {
+              "label": "Internship weekly workload"
+            },
+            "studentNeighborhood": {
+              "label": "Student neighborhood"
+            },
+            "studentAddress": {
+              "label": "Student address"
+            },
+            "studentHouseNumber": {
+              "label": "Student house number"
+            },
+            "studentAddressComplement": {
+              "label": "Student address complement"
+            },
+            "studentZipCode": {
+              "label": "Student ZIP code"
+            },
+            "studentStudyShift": {
+              "label": "Student study shift"
+            },
+            "professorName": {
+              "label": "Professor name"
+            },
+            "professorPosition": {
+              "label": "Professor position"
+            },
+            "professorCpf": {
+              "label": "Professor CPF"
+            },
+            "professorEmail": {
+              "label": "Professor email"
+            },
+            "professorPhone": {
+              "label": "Professor phone"
+            },
+            "professorAcademicBackground": {
+              "label": "Professor academic background"
+            },
+            "curricularComponentAdvisor": {
+              "label": "Curricular component advisor"
+            }
+          }
+        },
+        "InternshipReferralForm": {
+          "fields": {
+            "schoolName": {
+              "label": "School name"
+            },
+            "studentName": {
+              "label": "Student name"
+            },
+            "studentStudyPeriod": {
+              "label": "Study period"
+            },
+            "studentDegreeProgram": {
+              "label": "Degree program"
+            },
+            "schoolYearStage": {
+              "label": "School year/stage"
+            },
+            "schoolModality": {
+              "label": "School modality"
+            },
+            "studentSubject": {
+              "label": "Subject"
+            },
+            "internshipStartDate": {
+              "label": "Internship start date"
+            },
+            "internshipEndDate": {
+              "label": "Internship end date"
+            },
+            "year": {
+              "label": "Year"
+            },
+            "universityCampus": {
+              "label": "University campus"
+            },
+            "documentDate": {
+              "label": "Document date"
+            }
+          }
+        },
+        "InternshipSupervisionStatementForm": {
+          "fields": {
+            "studentName": {
+              "label": "Student name"
+            },
+            "courseSubject": {
+              "label": "Subject"
+            },
+            "professorName": {
+              "label": "Professor name"
+            },
+            "professorAcademicBackground": {
+              "label": "Professor academic background"
+            },
+            "professorCpf": {
+              "label": "Professor CPF"
+            },
+            "professorPhone": {
+              "label": "Professor phone"
+            },
+            "professorEmail": {
+              "label": "Professor email"
+            },
+            "internshipProviderName": {
+              "label": "Internship provider name"
+            },
+            "internshipProviderCity": {
+              "label": "Internship provider city"
+            },
+            "date": {
+              "label": "Date"
+            }
+          }
+        }
       }
     },
 
@@ -279,5 +428,19 @@
     },
 
     "ui": {}
+  },
+  "lib": {
+    "validation": {
+      "messages": {
+        "requiredField": "The field **{field}** is required.",
+        "invalidField": "The field **{field}** is invalid.",
+        "requiredMinLength": "The field **{field}** must have at least {min} characters.",
+        "requiredMaxLength": "The field **{field}** must have at most {max} characters.",
+        "invalidPassword": "The password must be between 8 and 128 characters, including at least one lowercase letter, one uppercase letter, one number, one symbol, and may contain spaces.",
+        "unmatchedPasswords": "The passwords do not match. Please make sure you entered the same password in both fields.",
+        "invalidPhone": "'Please enter a phone number in the following format: +XX (XX) 9XXXX-XXXX.'",
+        "invalidUuid": "'Please enter a valid UUID in the format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.'"
+      }
+    }
   }
 }

@@ -24,4 +24,5 @@ export const LOCALES: Record<
   },
 };
 
+export const VALID_LOCALES = Object.keys(LOCALES);
 export const DEFAULT_LOCALE = LOCALES['pt-BR'].value;
