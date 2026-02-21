@@ -6,7 +6,7 @@ import * as React from 'react';
 import { Button } from '@/app/components/ui/button';
 import { Input } from '@/app/components/ui/input';
 import { Textarea } from '@/app/components/ui/textarea';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/shared.utils';
 
 function InputGroup({ className, ...props }: React.ComponentProps<'div'>) {
   return (
